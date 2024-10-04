@@ -144,38 +144,124 @@ header .container {
 
 /*---------------------------------------------------------------------*/
 
-#portfolio .container .projects {
+/* #portfolio .container .projects {
     max-width: 400px;
     height: 550px;
     border-radius: 8px;
     border: 1px solid #d7d1d1;
+} */
+
+#portfolio .projects {
+    position: relative; /* Necesario para posicionar elementos hijos de forma absoluta */
+    width: 100%; /* Ajusta el ancho según sea necesario */
+    height: 300px; /* Ajusta la altura según sea necesario */
+    overflow: hidden; /* Asegura que la imagen no se desborde del contenedor */
 }
 
-#portfolio .projects img {
+/* #portfolio .projects img {
     width: 100%;
     height: 64vh;
     object-fit: cover;
+} */
+
+#portfolio .projects img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la imagen llene todo el contenedor */
+    z-index: 0; /* Asignamos un índice z más alto a la imagen */
+}
+
+#portfolio .projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.85);; /* Fondo negro encima de la imagen */
+    z-index: 1; /* Fondo negro encima de la imagen */
+    opacity: 0; /* Esconde el fondo negro por defecto */
+    transition: opacity 0.3s ease; /* Transición suave */
+}
+
+/* #portfolio .projects h4 {
+    margin: 0;
+    padding: 0 5px;
+} */
+
+/* #portfolio .projects p {
+    margin: 0;
+    padding: 5px 5px;
+}  */
+
+/* #portfolio .projects a {
+    margin: 0;
+    padding: 5px 5px;
+} */
+
+#portfolio .projects h4,
+#portfolio .projects p,
+#portfolio .projects a {
+    /* position: relative;
+    /* top: 20px; Ajusta la distancia desde la parte superior */
+    /* right: 20px; Ajusta la distancia desde el lado derecho */
+    /* color: #fff; Color del texto para buena visibilidad sobre la imagen */
+    /* z-index: 2; Asignamos un índice z aún más alto al texto */
+    /* border: solid #000; */
+    /* padding: 10px; Espacio interno alrededor del texto */
+    /* margin-bottom: 10px; Asegura que no haya márgenes adicionales alrededor */
+    opacity: 1; /*Esconde el texto por defecto
+    /* transition: opacity 0.3s ease; Transición suave */ 
 }
 
 #portfolio .projects h4 {
-    margin: 0;
-    padding: 0 5px;
+    /* margin-top: 10px; Asegura que el título no tenga margen superior adicional */
+    position: absolute;
+    margin-bottom: 10px; /* Añade espacio entre el título y la frase */
+    top: -10px;
+    left: 10px;
+    color: #fff;
+    z-index: 2;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 #portfolio .projects p {
+    /* margin-top: 10px; Espacio entre el título y el párrafo */
+    position: absolute;
+    top: 60px; /* Ajusta según sea necesario */
+    left: 10px;
+    color: #fff;
+    z-index: 2;
+    padding: 10px;
     margin: 0;
-    padding: 5px 5px;
-} 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
 #portfolio .projects a {
+    /* margin-top: 10px; Espacio entre el párrafo y el enlace */
+    /* display: inline-block; Asegura que el enlace se muestre como un bloque separado */
+    position: absolute;
+    bottom: 50px;
+    right: -45px;
+    color: #fff;
+    z-index: 2;
+    padding: 10px;
     margin: 0;
-    padding: 5px 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: rotate(-90deg); /* Gira el enlace para que quede vertical */
 }
 
-#portfolio .projects a:hover {
+/* #portfolio .projects a:hover {
     color: #C90B4A;
     transform: scale(1.05);
-}
+} */
 
 #portfolio .container {
     padding: 0 30px;
@@ -190,6 +276,16 @@ header .container {
     max-width: 1200px;
     margin: auto;
     padding: 75px 30px 20px 30px;
+}
+
+#portfolio .projects:hover::before {
+    opacity: 0.7; /* Muestra el fondo negro al hacer hover */
+}
+
+#portfolio .projects:hover h4,
+#portfolio .projects:hover p,
+#portfolio .projects:hover a {
+    opacity: 1; /* Muestra el texto al hacer hover */
 }
 
 /*---------------------------------------------------------------------*/
@@ -345,9 +441,18 @@ header .container {
     }
     /*------------------------------------------------------*/
 
-    #about .img-profile {
-        display: none;
+    #about .img-profile img {
+        max-width: 300px;
+        height: auto;
     }
+
+    #about .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
 
     /*------------------------------------------------------*/
 
