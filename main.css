@@ -28,7 +28,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #fff; /* Cambia el color de fondo según tu diseño */
+    background-color: #ffffff; /* Cambia el color de fondo según tu diseño */
     z-index: 999;
     border-bottom: 1px solid #d7d1d1;
 }
