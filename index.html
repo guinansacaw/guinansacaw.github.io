@@ -17,7 +17,9 @@
 <body>
     <header>
         <div class="container">
-            <p class="logo" data-translate="logo">🐦 William Guiñansaca</p>
+            <p class="logo">
+                <img src="images/pajaro_rojo.png" alt=""> William Guiñansaca
+            </p>
             
             <input type="checkbox" id="men-u"/>
             <label for="men-u" class="men-u-icono">
@@ -46,17 +48,74 @@
         <div class="container">
             <div class="tittle">
                 <h1>William <br>Guiñansaca</h1>
-                <p data-translate="home_description">Data Analytics</p>
+                <!-- <p data-translate="home_description">Data Analytics</p> -->
+                <p><a href="#portfolio" data-translate="home_description">Data Analytics Portfolio &rarr;</a></p>
             </div>
         </div>
     </section>
 
+
+
+
+    <section id="tech-stack">
+        <div class="container-icons">
+            <div class="icon-item">
+                <img src="images/programas/icons8-configuración-de-datos-96.png" alt="SQL Icon">
+                <p>SQL</p>
+            </div>
+            <div class="icon-item">
+                <img src="images/programas/icons8-power-bi.svg" alt="Power BI Icon">
+                <p>Power BI</p>
+            </div>
+            <div class="icon-item">
+                <img src="images/programas/icons8-logotipo-de-rstudio.svg" alt="RStudio Icon">
+                <p>Rstudio</p>
+            </div>
+            <div class="icon-item">
+                <img src="images/programas/icons8-python.svg" alt="Python Icon">
+                <p>Python</p>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+
+    
+
     <section id="about">
         <div class="container">
             <div class="about-text">
-                <p data-translate="about_intro">I have developed skills in coding, storytelling, and data viz. Over the past year, I have been involved in projects and learning data analysis using software such as Excel, Oracle PL/SQL, statistical tools like RStudio/Python, and business intelligence tools such as Power BI and Tableau.</p>
-                <h4 data-translate="about_skills_title">Techniques & Skills:</h4>
-                <p data-translate="about_skills">Statistics & Probability <br> Supervised learning (regression, classification) <br> Unsupervised learning (clustering) <br> Deep learning</p>
+                <div>
+                    <h2 data-translate="about_title">About me</h2>
+                </div>
+                <div>
+                    <p data-translate="about_intro">I have developed skills in coding, storytelling, and data viz. Over the past year, I have been involved in projects and learning data analysis using software such as Excel, Oracle PL/SQL, statistical tools like RStudio/Python, and business intelligence tools such as Power BI and Tableau.</p>
+                </div>
+                <div>
+                    <h3 data-translate="about_skills_title">Techniques & Skills:</h3>
+                </div>
+
+                <div class="about-techniques">
+                    <div class="about-number">01</div>
+                    <div>
+                        <p data-translate="about_skills1">Statistics & Probability </p>
+                    </div>
+                    <div class="about-number">02</div>
+                    <div>
+                        <p data-translate="about_skills2">Supervised learning (regression, classification)</p>
+                    </div> 
+                    <div class="about-number">03</div>
+                    <div>
+                        <p data-translate="about_skills3">Unsupervised learning (clustering)</p>
+                    </div>
+                    <div class="about-number">04</div>
+                    <div>
+                        <p data-translate="about_skills4">Big Data</p>
+                    </div>
+                </div> 
             </div>
             <div class="img-profile">
                 <img src="images/perfil/perfil.png" alt="Profile Image">
@@ -68,7 +127,7 @@
         <h2 data-translate="portfolio_title">Portfolio</h2>
         <div class="container">
             <div class="projects">
-                <img src="images/fondos/fondomariob.png" alt="">
+                <img src="images/proyectos/cyclistic.png" alt="">
                 <h4 data-translate="portfolio_project1_title">Customer Satisfaction</h4>
                 <p data-translate="portfolio_project1_desc">Lorem ipsum dolor sit.</p>
                 <a href="#" data-translate="portfolio_project1_link">More details &#8594;</a>
@@ -141,7 +200,9 @@
                     <a href="https://www.kaggle.com/guinansacaw" target="_blank"><img src="images/redessociales/kaggle.svg" alt="Kaggle"></a>
                 </div>
             </div>
-            <p><small data-translate="footer_rights">🐦 &copy; All rights reserved - William Guiñansaca 🐦</small></p>
+            <p><small>
+                <img src="images/pajaro_rojo.png" alt=""> &copy; All rights reserved - William Guiñansaca <img src="images/pajaro_rojo.png" alt="">
+            </small></p>
         </div>
     </footer>
     <script src="script.js"></script>

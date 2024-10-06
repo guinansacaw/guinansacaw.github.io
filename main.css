@@ -12,7 +12,7 @@ h2, h3, h4, p, a {
 }
 
 body{
-    background-color: #ffffff;
+    background-color: #fcfcfc;
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
@@ -28,7 +28,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #ffffff; /* Cambia el color de fondo según tu diseño */
+    background-color: #fcfcfc; /* Cambia el color de fondo según tu diseño */
     z-index: 999;
     border-bottom: 1px solid #d7d1d1;
 }
@@ -87,8 +87,13 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 50px;
 }
+
+header img {
+    max-width: 18px;
+    vertical-align: -3px;
+} 
 
 #home .container {
     display: flex;
@@ -112,10 +117,71 @@ header .container {
     margin-bottom: 0;
 }
 
-#home p {
+#home .container .tittle a {
     margin-top: 0;
     padding-left: 20px;
 }
+
+#home .container .tittle p a:hover {
+    color: #C90B4A;
+    transform: scale(1.05);
+}
+
+
+/*-----------------------------------------------------------------------*/
+
+
+#tech-stack {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.container-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 160px;
+    padding: 10px;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.icon-item img {
+    max-width: 40px;
+    height: auto;
+    filter: grayscale(100%); /* Convierte la imagen a blanco y negro */
+    transition: filter 0.3s ease;
+}
+
+.icon-item p {
+    margin-top: 20px;
+    letter-spacing: 3px;
+    margin-left: 10px ;
+    font-weight: 500;
+    font-size: large;
+    color: #333333;
+}
+
+/* Efecto hover */
+.icon-item img:hover {
+    filter: grayscale(0%); /* Vuelve a color al pasar el ratón */
+}
+
+.icon-item img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen en un 10% */
+    filter: grayscale(0%); /* Vuelve a color */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Efecto suave */
+}
+
+/* .icon-item img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave 
+} */
 
 /*---------------------------------------------------------------------*/
 
@@ -140,6 +206,34 @@ header .container {
 .img-profile img {
     max-width: 500px;
     height: auto;
+}
+
+#about .about-techniques {
+    display: grid;
+    grid-template-columns: 50px auto;
+    align-items: start;
+    row-gap: 0px; /* Ajusta el espaciado vertical entre las filas */
+    align-items: center; /* Centra verticalmente el texto respecto al número */
+    column-gap: 10px;
+}
+
+#about .about-number {
+    font-size: 40px;
+    font-weight: bold;
+    /*color: #595959;*/
+    text-align: left;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.3); /* Efecto de transparencia */
+    line-height: 1; /* Reduce el interlineado de los números */
+    margin-right: 10px; /* Añade espacio entre los números y las letras */
+    clip-path: polygon(0 1%, 100% 0, 100% 89%, 0% 100%);
+    opacity: 0.5;
+    background: linear-gradient(to right, transparent 10%, #d7d1d1 50%);
+}
+
+.about-techniques p {
+    justify-content: center;
+    
 }
 
 /*---------------------------------------------------------------------*/
@@ -264,12 +358,12 @@ header .container {
 } */
 
 #portfolio .container {
-    padding: 0 30px;
+    padding: 0 20px;
     display: grid;
     grid-template-columns: 
     repeat(auto-fit,
-    minmax(150px,1fr));
-    gap: 30px;
+    minmax(300px,1fr));
+    gap: 10px;
 }
 
 #portfolio h2 {
@@ -377,8 +471,8 @@ header .container {
 
 #footer .container p {
     padding: 1px 0;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 #footer .img-footer {
@@ -388,6 +482,11 @@ header .container {
 
 #footer .img-footer img {
     max-width: 25px;
+}
+
+#footer p img {
+    max-width: 16px;
+    vertical-align: -3px;
 }
 
 /*---------------------------------------------------------------------*/
@@ -436,14 +535,35 @@ header .container {
     #home .container .tittle h1 {
         font-size: 12vw;
     }
-    #home .container .tittle p {
+    #home .container .tittle a {
         padding-left: 8px;
+        padding-top: 9px;
+    }
+
+
+
+    /*-------------------------------------------------------*/
+
+
+
+
+    #tech-stack .container-icons {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    #tech-stack .icon-item img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    #tech-stack .icon-item p {
+        font-size: 14px;
     }
     /*------------------------------------------------------*/
 
     #about .img-profile img {
-        max-width: 300px;
-        height: auto;
+        display: none;
     }
 
     #about .container {
@@ -451,7 +571,12 @@ header .container {
         flex-direction: column;
     }
 
-
+    #about .about-techniques {
+        display: grid;
+        grid-template-columns: 60px auto;
+        row-gap: 5px;
+        align-items: center;
+    }
 
 
     /*------------------------------------------------------*/

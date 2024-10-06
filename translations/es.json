@@ -5,10 +5,14 @@
     "menu_about": "Acerca de",
     "menu_portfolio": "Portafolio",
     "menu_contact": "Contacto",
-    "home_description": "Análisis de Datos",
+    "home_description": "Portafolio | Análisis de Datos &rarr;",
+    "about_title": "Sobre mí",
     "about_intro": "He desarrollado habilidades en codificación, narración de historias y visualización de datos. En el último año, he estado involucrado en proyectos y aprendiendo análisis de datos utilizando software como Excel, Oracle PL/SQL, herramientas estadísticas como RStudio/Python y herramientas de inteligencia empresarial como Power BI y Tableau.",
     "about_skills_title": "Técnicas & Habilidades:",
-    "about_skills": "Estadística y Probabilidad<br>Aprendizaje supervisado (regresión, clasificación)<br>Aprendizaje no supervisado (agrupamiento, reducción de dimensionalidad)<br>Aprendizaje profundo",
+    "about_skills1": "Estadística y Probabilidad",
+    "about_skills2": "Aprendizaje supervisado (regresión, clasificación)",
+    "about_skills3": "Aprendizaje no supervisado (agrupamiento, reducción de dimensionalidad)",
+    "about_skills4": "Big Data",
     "portfolio_title": "Portafolio",
     "portfolio_project1_title": "Satisfacción del Cliente",
     "portfolio_project1_desc": "Lorem ipsum dolor sit.",
@@ -27,5 +31,5 @@
     "contact_send_button": "Enviar Correo",
     "contact_social_intro": "Recopilar, procesar, analizar y presentar datos - desde apoyar decisiones comerciales diarias hasta impulsar el cambio global. Puedes escribirme o visitar mis redes sociales.",
     "footer_more_about": "Más sobre:",
-    "footer_rights": "🐦 &copy; Todos los derechos reservados - William Guiñansaca 🐦"
+    "footer_rights": "&copy; Todos los derechos reservados - William Guiñansaca"
 }
