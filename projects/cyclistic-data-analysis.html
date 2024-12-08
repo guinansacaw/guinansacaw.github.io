@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/projects.css">
+    <title data-translate="cyclistic-title-page">Cyclistic - Google Data Analytics Certification</title>
+    <meta name="description" content="Google Data Analytics Certification, Cyclistic case study, RStudio, statistics, data analysis, descriptive analysis">
+    <meta name="keywords" content="portfolio, google data analitycs, data analysis, cyclistic, dashboard">
+    <meta property="og:title" content="Cyclistic - Google Data Analytics Certification">
+    <meta property="og:description" content="Google Data Analytics Certification, Cyclistic case study, RStudio, statistics, data analysis">
+    <!-- <meta property="og:image" content=""> -->
+    <meta property="og:url" content="https://guinansacaw.github.io/projects/cyclistic">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+
+
+<!-- <div id="toc">
+    <ul>
+        <li><a href="#section1">Introducción</a></li>
+        <li><a href="#section2">Desarrollo</a></li>
+        <li><a href="#section3">Conclusión</a></li>
+    </ul>
+</div> -->
+
+
+
+<body>
+    <header>
+        <div class="container">
+            <p class="logo">
+                <img src="/images/pajaro_rojo.png" alt=""> William Guiñansaca
+            </p>
+            
+            <input type="checkbox" id="men-u"/>
+            <label for="men-u" class="men-u-icono">
+                <img src="/images/menu3.png" alt="">
+            </label>
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <i class="bi bi-globe2"></i>
+                        <select id="lang-selector" class="language">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                        </select>
+                    </li>
+                    <li><a href="/#home" data-translate="menu_home">Home</a></li>
+                    <li><a href="/#about" data-translate="menu_about">About</a></li>
+                    <li><a href="/#portfolio" data-translate="menu_portfolio">Portfolio</a></li>
+                    <li><a href="/#contact" data-translate="menu_contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+        <section id="content">
+            <div class="container">
+                <img src="/images/proyectos/cyclistic/cyclistic-portada2.png" alt="Cyclistic Case Study">
+                <figcaption>
+                    <small>
+                        Foto de <a href="https://unsplash.com/es/@jtbean?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Josh Bean</a> en <a href="https://unsplash.com/es/fotos/bicicleta-en-blanco-y-negro-durante-el-dia-CjzEfZVYetI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                    </small>
+                </figcaption>
+                <h1 data-translate="cyclistic-title-project">Cyclistic Case Study</h1>
+                <p data-translate="cyclistic-intro">The final capstone project for obtaining the Google Data Analysis Certification, based on the 6-step framework from Google for data analytics: Ask, Prepare, Process, Analyze, Share & Act. The project involved tasks such as:</p>
+    
+                
+    
+                <ul  class="minimal-list">
+                    <li data-translate="cyclistic-task1">Data cleaning in R</li>
+                    <li data-translate="cyclistic-task2">Data transformation in R</li>
+                    <li data-translate="cyclistic-task3">Data visualization using R</li>
+                </ul>
+    
+                <h2 data-translate="cyclistic-about-dataset">About the dataset</h2>
+                <p>
+                    <span data-translate="cyclistic-data-source">The data used in the analysis comes from </span>
+                    <a href="https://divvy-tripdata.s3.amazonaws.com/index.html" data-translate="cyclistic-data-source-link" class="simple-link">Index of bucket 'divvy-tripdata</a>.
+                    <span data-translate="cyclistic-license-info">The data has been made available by Motivate International Inc. under this</span>
+                    <a href="https://ride.divvybikes.com/data-license-agreement" data-translate="cyclistic-license-link" class="simple-link">license</a>.
+                
+
+                <h2 data-translate="cyclistic-documents-title">Guidelines for documents</h2>
+                <p>
+                    <span data-translate="cyclistic-documentation">You can find all the documentation related to the code in the following</span>
+                    <a href="https://github.com/guinansacaw/cyclistic_case_study/blob/main/cyclistic_report.md" data-translate="cyclistic-documentation-link" class="simple-link">markdown</a>
+                    <span data-translate="cyclistic-github">on GitHub.</span>
+                    <span data-translate="cyclistic-presentation-info">Additionally, there is a presentation with insights available on</span>
+                    <a href="https://docs.google.com/presentation/d/18BJIBkqSkpZffrW8yM6yAzcsjYc9tKOiaDZbxy98p20/edit?usp=sharing" class="simple-link">Google Slides</a>,
+                    <span data-translate="cyclistic-dashboard-info">and you can also view the dashboard created in</span>
+                    <a href="https://public.tableau.com/views/cyclisticcasestudy_16789858088850/cyclistic?:language=en-US&:display_count=n&:origin=viz_share_link" class="simple-link">Tableau</a>.
+                </p>
+
+
+
+                <h1 data-translate="cyclistic-summary">Summary</h1>
+                <p data-translate="cyclistic-project-info"><i>The main objective of the project is to design strategies to convert casual users into annual members of Cyclistic, a bike-sharing service. Through the analysis of usage data, the behavior patterns of casual users and members were compared, focusing on ride duration, the most frequent days and months of use, and preferences for bike types. The results show that members take shorter rides and during specific days of the week, while casual users tend to ride more on weekends and prefer electric bikes. Based on these findings, marketing strategies and promotions are recommended to increase the conversion of casual users to members, such as offers for long rides, promotions on key days, and discounts for new members.</i></p>
+
+
+
+
+                <h1 data-translate="cyclistic-development">Desarrollo</h1>
+                <p data-translate="cyclistic-development-desc">Cyclistic’s finance analysts have concluded that annual members are much more profitable than casual riders. Then, the goal is to design marketing strategies aimed at converting casual riders into annual members.</p>
+                
+
+
+
+                <h2 data-translate="cyclistic-key-question">Pregunta clave (Ask)</h2>
+                <p data-translate="cyclistic-key-question-desc">Debido al objetivo del proyecto, la pregunta principal está bien definida: ¿Cómo podemos diseñar estrategias para convertir a usuarios ocasionales en miembros anuales de Cyclistic? Para explorar diferentes dimensiones del problema desglosamos la pregunta principal en varias más:</p>
+                <ul class="minimal-list">
+                    <li data-translate="cyclistic-key-question-item-1">¿Qué diferencias clave existen entre los patrones de uso de miembros y usuarios ocasionales?</li>
+                    <li data-translate="cyclistic-key-question-item-2">¿Qué factores influyen en la preferencia de tipo de bicicleta?</li>
+                    <li data-translate="cyclistic-key-question-item-3">¿Cómo varía el uso de bicicletas por día, hora o temporada?</li>
+                </ul>
+
+
+
+
+                <h2 data-translate="cyclistic-data-preparation">Preparación de los datos (Prepare)</h2>
+                <p data-translate="cyclistic-data-preparation-desc">All the data has been downloaded from the following <a href="https://divvy-tripdata.s3.amazonaws.com/index.html" class="simple-link">link</a>. To identifying good data, it has to be: realible, original, comprehensive, current and cited (ROCCC). Therefore, the data is ROCCC.</p>
+
+                
+
+                
+                <h2 data-translate="cyclistic-processing">Procesamiento (Process)</h2>
+                <ul class="detailed-list">
+                    <li>
+                        <h3 data-translate="cyclistic-processing-item1-title">Identify how the data is organized</h3>
+                        <p data-translate="cyclistic-processing-item1-desc">All trip data is in comma-delimited .CSV format. Los datos están organizados en un data frame con 5,755,694 observaciones y 13 variables. Cada fila representa un registro de viaje individual, y las columnas describen diferentes características del viaje, del tipo de bicicleta, y del usuario. El dataset mezcla datos categóricos (<strong>rideable_type, member_casual</strong>) con datos temporales (<strong>started_at, ended_at</strong>) y espaciales (<strong>start_lat, start_lng, end_lat, end_lng</strong>).</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="cyclistic-processing-item2-title">Statistical summary</h3>
+                        <p data-translate="cyclistic-processing-item2-desc">Se observa que la mayoría de las variables están dentro de un rango esperado para la ubicación (Chicago). Las columas <strong>started_at</strong> y <strong>ended_at</strong> Están en formato character y necesitan ser convertidas a datetime. Las columnas <strong>ended_at</strong> - <strong>started_at</strong> pueden identificar la duración promedio de los viajes. En el tipo de usuario, los miembros representan el 59% del total, mientras que los usuarios casuales son el 41%, destacando el potencial de conversión. Igualmente, existen bicicletas eléctricas (51%), seguidas por las clásicas (46%), mientras que las docked bikes tienen un uso marginal (3%).</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="cyclistic-processing-item3-title">Missing values</h3>
+                        <p data-translate="cyclistic-processing-item3-desc">Las columnas <strong>start_lat</strong>, <strong>start_lng</strong>, <strong>end_lat</strong> y <strong>end_lng</strong> tienen 5,835 valores nulos, que representan aproximadamente el 0.10%, lo cual es bastante bajo, por tanto, estas filas son eliminadas.</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="cyclistic-processing-item4-title">Transform the data</h3>
+                        <p data-translate="cyclistic-processing-item4-desc">Las coordenadas geográficas: <strong>start_lat, start_lng, end_lat, end_lng</strong> se excluyen del análisis. Para analizar la duración y patrones de tiempo de los viajes más fácilmente se crean las siguientes columnas: <strong>year, month, day, ride_length_sec, ride_length_hrs</strong>.</p>
+                    </li>
+                </ul>
+
+
+
+                
+                
+                <h2 data-translate="cyclistic-analyse">Análisis (Analyse)</h2>
+                <ul class="detailed-list">
+                    <li>
+                        <h3 data-translate="cyclistic-analyse-item1-title">Duración promedio del viaje</h3>
+                        <p data-translate="cyclistic-analyse-item1-desc">Los usuarios casuales tienen una duración promedio significativamente mayor (1750.47 segundos o aproximadamente 29 minutos) que los miembros anuales (762.93 segundos o 12 minutos). Esto sugiere que los usuarios casuales tienden a realizar viajes más largos.</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="cyclistic-analyse-item2-title">Día de la semana y patrón de uso</h3>
+                        <p data-translate="cyclistic-analyse-item2-desc">El día más frecuente para realizar viajes es sábado, tanto para miembros como para usuarios casuales. Sin embargo, los usuarios miembros tienden a preferir los jueves como día más común, lo que podría estar relacionado con patrones laborales o de rutina.</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="cyclistic-analyse-item3-title">Mes más común para viajes</h3>
+                        <p data-translate="cyclistic-analyse-item3-desc">El mes con mayor frecuencia de viajes es julio, lo que podría indicar un aumento en el uso debido al clima cálido o actividades recreativas.</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="cyclistic-analyse-item4-title">Duración del viaje por día de la semana</h3>
+                        <p data-translate="cyclistic-analyse-item4-desc">Los usuarios casuales registran viajes más largos los domingos (2031.26 segundos, unos 34 minutos) y los sábados (1958.27 segundos, unos 33 minutos). Los usuarios miembros tienen duraciones más uniformes, aunque los viajes son más largos los domingos y sábados (alrededor de 14 minutos).</p>
+                    </li>
+                </ul>
+
+
+
+
+
+
+
+                <h2 data-translate="cyclistic-share">Compartir (Share)</h2>
+
+                <div style="width: 100%; max-width: 1200px; margin: 0 auto;">
+                    <div class='tableauPlaceholder' id='viz1731901877762' style='position: relative'>
+                        <noscript><a href='#'><img alt='cyclistic' src='https://public.tableau.com/.../1_rss.png' style='border: none' /></a></noscript>
+                        <object class='tableauViz' style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='site_root' value='' />
+                            <param name='name' value='cyclisticcasestudy_16789858088850/cyclistic' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                        </object>
+                    </div>
+                </div>
+                <script type='text/javascript'>
+                    var divElement = document.getElementById('viz1731901877762');
+                    var vizElement = divElement.getElementsByTagName('object')[0];
+                    vizElement.style.width = '100%'; /* Ajusta el ancho al 100% del contenedor */
+                    vizElement.style.height = '800px'; /* Ajusta la altura */
+                    var scriptElement = document.createElement('script');
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                </script>
+
+
+
+                
+                <h2 data-translate="cyclistic-act">Actuar (Act)</h2>
+                <p data-translate="cyclistic-act-description-1">The mode for casual and member users, and the average trip duration during the entire week, demonstrate a marked difference between these two types of users. Casual members use bikes mainly on weekends, while members use bikes for a constant time during all their trips in the workweek. Additionally, while casual users spend more time on their trips, members try to save time with shorter trips averaging 12 minutes.</p>
+                <p data-translate="cyclistic-act-description-2">These facts indicate the importance of weekends, and it is noteworthy to mention the peak of the curve during summer months. Therefore, months like June, July, and August have more bike rentals than any other season. Finally, it is worth mentioning the popularity of electric bikes among casual users.</p>
+                <p data-translate="cyclistic-act-description-3">Therefore, casual users cannot be converted to members in the same way as the latter, due to their different reasons for renting a bike.</p>
+
+                <h3 data-translate="cyclistic-recommendations">Recommendations</h3>
+                <ul class="minimal-list">
+                    <li data-translate="cyclistic-recommendation-1">Offer an annual weekend-only membership.</li>
+                    <li data-translate="cyclistic-recommendation-2">Offer a summer season membership.</li>
+                    <li data-translate="cyclistic-recommendation-3">Offer tour packages to attract casual users during the workweek.</li>
+                    <li data-translate="cyclistic-recommendation-4">Apply discounts to riders who spend more than 25 minutes on the trip if they get a membership.</li>
+                    <li data-translate="cyclistic-recommendation-5">Focus on all marketing strategies during the summer.</li>
+                    <li data-translate="cyclistic-recommendation-6">Focus marketing strategies on electric bikes.</li>
+                </ul>
+
+
+
+
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- <section id="call-to-action">
+        <h2>¿Qué sigue?</h2>
+        <p>Si tienes preguntas sobre este proyecto o quieres colaborar, contáctame. También puedes explorar otros proyectos relacionados.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn">Contáctame</a>
+          <a href="portfolio.html" class="btn">Explorar más proyectos</a>
+        </div>
+      </section> -->
+      
+      <a href="/#contact" class="floating-btn" data-translate="float-btn-contact">Contáctame</a>
+      
+
+
+
+
+      
+
+    <!-- <section id="section1">
+      
+    </section>
+    
+    <section id="section2">
+        <h1>Desarrollo</h1>
+        <p>Contenido del desarrollo...</p>
+    </section>
+    
+    <section id="section3">
+        <h1>Conclusión</h1>
+        <p>Contenido de la conclusión...</p>
+    </section> -->
+
+
+
+
+
+
+    <hr class="borde">
+
+    <footer id="footer">
+        <div class="container">
+            <p><small data-translate="footer_more_about">More about:</small></p>
+            <div class="img-footer">
+                <div class="img-footer-1">
+                    <a href="https://www.coursera.org/learner/guinansacaw" target="_blank"><img src="/images/redessociales/coursera.svg" alt="Coursera"></a>
+                </div>
+                <div class="img-footer-2">
+                    <img src="/images/redessociales/datacamp.svg" alt="">
+                </div>
+                <div class="img-footer-3">
+                    <a href="https://www.kaggle.com/guinansacaw" target="_blank"><img src="/images/redessociales/kaggle.svg" alt="Kaggle"></a>
+                </div>
+            </div>
+            <p><small>
+                <img src="/images/pajaro_rojo.png" alt=""> &copy; All rights reserved - William Guiñansaca <img src="/images/pajaro_rojo.png" alt="">
+            </small></p>
+        </div>
+    </footer>
+
+    <script src="/js/translations.js"></script>
+    <script src="/js/menu-header.js"></script>
+</body>

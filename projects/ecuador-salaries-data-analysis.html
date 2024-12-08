@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/projects.css">
+    <title data-translate="ecuadorsalaries-title-page">Ecuador Salaries - Data Analysis</title>
+    <meta name="description" content="Ecuador Salaries - Data Analysis, RStudio, statistics, data analysis, descriptive analysis">
+    <meta name="keywords" content="portfolio, data analyst, ecuador, salaries, jobs">
+    <meta property="og:title" content="Ecuador Salaries - Data Analysis">
+    <meta property="og:description" content="ecuador, salaries, descriptive analysis, RStudio, statistics, data analysis">
+    <!-- <meta property="og:image" content=""> -->
+    <meta property="og:url" content="https://guinansacaw.github.io/projects/ecuador-salaries-data-analysis">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <p class="logo">
+                <img src="/images/pajaro_rojo.png" alt=""> William Guiñansaca
+            </p>
+            
+            <input type="checkbox" id="men-u"/>
+            <label for="men-u" class="men-u-icono">
+                <img src="/images/menu3.png" alt="">
+            </label>
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <i class="bi bi-globe2"></i>
+                        <select id="lang-selector" class="language">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                        </select>
+                    </li>
+                    <li><a href="/#home" data-translate="menu_home">Home</a></li>
+                    <li><a href="/#about" data-translate="menu_about">About</a></li>
+                    <li><a href="/#portfolio" data-translate="menu_portfolio">Portfolio</a></li>
+                    <li><a href="/#contact" data-translate="menu_contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+        <section id="content">
+            <div class="container">
+                <img src="/images/proyectos/ecuador-salaries/ecuador-salarios-portada.png" alt="Empleos en Ecuador">
+                <figcaption>
+                    <small data-translate="ecuadorSalaries-photo-credit">Foto de <a href="https://unsplash.com/es/@dwiadro?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Daniel Wiadro</a> en <a href="https://unsplash.com/es/fotos/hombre-soldando-un-metal-negro-GAEvM4qvlBk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></small>
+                </figcaption>
+
+
+                <h1 data-translate="ecuadorSalaries-title">Análisis de Datos de Empleo y Salarios en Ecuador</h1>
+                <p data-translate="ecuadorSalaries-description">Este proyecto de análisis de datos se enfoca en comprender la distribución del empleo y los salarios en Ecuador. Implica múltiples tareas realizadas utilizando R, incluyendo limpieza de datos, análisis estadístico, visualización y el desarrollo de un tablero de control interactivo. Las tareas incluidas son:</p>
+
+                <ul class="minimal-list">
+                    <li data-translate="ecuadorSalaries-data-cleaning"><strong>Limpieza de datos:</strong> Se eliminaron los valores nulos y se trataron los valores atípicos en variables como salarios y datos de empleo.</li>
+                    <li data-translate="ecuadorSalaries-salary-analysis">
+                        <p><strong>Análisis Salarial:</strong> Análisis de la distribución del empleo por sector y género.</p>
+                    </li>
+                    <li data-translate="ecuadorSalaries-visualizations">
+                        <p><strong>Visualizaciones:</strong> Se crearon múltiples gráficos para las clases de trabajo mejor pagadas por género, distribución del empleo, etc.</p>
+                    </li>
+                    <li data-translate="ecuadorSalaries-dashboard-development">
+                        <p><strong>Desarrollo de un Dashboard interactivo:</strong> Se filtraron visualizaciones y estadísticas basadas en datos con o sin valores atípicos.</p>
+                    </li>
+                </ul>
+                
+
+                <h2 data-translate="ecuadorSalaries-about-dataset">About the dataset</h2>
+                <p data-translate="ecuadorSalaries-about-dataset-description">The data comes from the <a href="http://www.ecuadorencifras.gob.ec/directoriodeempresas/" target="_blank" class="simple-link">Registro Estadístico de Empresas (REEM)</a> and includes data from various sources, such as the SRI, IESS, Superintendencia de Compañías, Ministerio de Educación, and INEC. Under the appropriate license for public use. The dataset was accessed on July 10, 2024. For more information, you can consult the Ecuador National Institute of Statistics and Census (INEC) website at the following <a href="https://www.ecuadorencifras.gob.ec/directoriodeempresas/" target="_blank" class="simple-link">link.</a></p>
+
+                <h2 data-translate="ecuadorSalaries-about-code">Sobre el código completo y documentación</h2>
+                <p data-translate="ecuadorSalaries-about-code-description">If you want to review the full project code, including data preprocessing and dashboard construction, you can visit my repository on <a href="https://github.com/guinansacaw/analisisRepositoriosEcuador/blob/main/README.md" class="simple-link" target="_blank">GitHub.</a> The dataset is not directly included in the repository. To obtain it, visit the previously mentioned data source.</p>
+
+
+
+                <h1 data-translate="ecuadorSalaries-summary">Resumen</h1>
+                <p data-translate="ecuadorSalaries-summary-description">Este proyecto analiza las remuneraciones y distribución de empleo en Ecuador desde una perspectiva de sector, clase de trabajo y género. Se utilizan técnicas de limpieza de datos, detección de outliers y visualización para identificar patrones y desigualdades. Los resultados muestran una brecha salarial significativa en la mayoría de los sectores. Sectores como "Explotación de Minas y Canteras" y "Relaciones Exteriores" destacan por sus remuneraciones más altas, mientras que sectores como "Servicios" presentan una mayor equidad de género en el empleo. Al explorar las clases de trabajo, actividades relacionadas con defensa, petróleo y regulación se identificaron como las mejores remuneradas.</p>
+
+                <h1 data-translate="ecuadorSalaries-development">Desarrollo</h1>
+
+                <h2 data-translate="ecuadorSalaries-key-question">Pregunta clave (Ask)</h2>
+                <p data-translate="ecuadorSalaries-key-question-description">La primera etapa contempla la definición del objetivo de este análisis. Realizamos las preguntas de investigación necesarias que respondan al objetivo.</p>
+                <ul class="minimal-list">
+                    <li data-translate="ecuadorSalaries-research-question-1">¿Cómo se distribuye las remuneraciones según las diferentes industrias?</li>
+                    <li data-translate="ecuadorSalaries-research-question-2">¿Cuáles son los sectores industriales con mayor remuneración?</li>
+                    <li data-translate="ecuadorSalaries-research-question-3">¿Cómo se distribuye las remuneraciones según el género?</li>
+                </ul>
+
+                <h2 data-translate="ecuadorSalaries-data-preparation">Preparación de los datos (Prepare)</h2>
+                <p data-translate="ecuadorSalaries-data-preparation-description">El análisis de la distribución de remuneraciones por empleo en Ecuador utiliza datos del <a href="http://www.ecuadorencifras.gob.ec/directoriodeempresas/" class="simple-link">Registro Estadístico de Empresas (REEM)</a>, proporcionados por el Instituto Nacional de Estadística y Censos (INEC). Este registro consolida información de múltiples fuentes oficiales, como el SRI, IESS y la Superintendencia de Compañías, además de encuestas estructurales realizadas por el INEC. Los datos, disponibles bajo una licencia ODbL-1.0, fueron accedidos el 10 de julio de 2024 desde el sitio oficial del INEC.</p>
+
+
+                <p data-translate="ecuadorSalaries-data-credibility">Para determinar la credibilidad de los datos usamos la metodología ROCCC y encontramos que los datos son:</p>
+                <ul class="minimal-list">
+                    <li data-translate="ecuadorSalaries-reliability"><strong>Reliability (Fiabilidad) - Alta:</strong> El Registro Estadístico de Empresas (REEM) se estructura tomando la información de diferentes fuentes: SRI, IESS, Superintendencia de Compañías, Ministerio de Educación, INEC (a través de encuestas).</li>
+                    <li data-translate="ecuadorSalaries-originality"><strong>Originality (Originalidad) - Media:</strong> Datos obtenidos de fuente primaria y secundaria.</li>
+                    <li data-translate="ecuadorSalaries-comprehensive"><strong>Comprehensive (Entendibles) - Alta:</strong> Cuenta con metadatos y diccionario.</li>
+                    <li data-translate="ecuadorSalaries-current"><strong>Current (Actuales) - Alta:</strong> Los últimos datos obtenidos son del año 2023.</li>
+                    <li data-translate="ecuadorSalaries-cited"><strong>Cited (Citados) - Alta:</strong> La recolección de datos y las fuentes están bien citadas.</li>
+                </ul>
+                
+                <h2 data-translate="ecuadorSalaries-processing">Procesamiento (Process)</h2>
+                <ul class="detailed-list">
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-knowing-data">Conociendo los datos</h3>
+                        <p data-translate="ecuadorSalaries-knowing-data-description">El proyecto utiliza dos conjuntos de datos del Registro Estadístico de Empresas, con más de un millón de observaciones cada uno, correspondientes a 2023 y 2022. Estos incluyen variables como identificadores únicos, ubicación, sector económico, plazas de empleo y remuneraciones, aunque no todas las variables son relevantes para el análisis.</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-data-cleaning1">Limpieza de datos</h3>
+                        <p data-translate="ecuadorSalaries-data-cleaning-description">El proceso de limpieza de datos incluyó la eliminación de variables irrelevantes, conservando las relacionadas con sectores productivos, y la verificación de tipos de datos. Las variables categóricas (sectores, provincia y cantón) no contienen valores nulos ni cadenas vacías, y los identificadores únicos no presentan duplicados. Además, se identificó una observación denominada "zona no delimitada".</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-data-transformation">Transformación de los datos.</h3>
+                        <p data-translate="ecuadorSalaries-data-transformation-description">Se ajustó el tipo de dato de la variable "año" a entero y se unieron los dos conjuntos de datos, que tenían las mismas columnas, para facilitar el análisis.</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-missing-values">Valores faltantes</h3>
+                        <p data-translate="ecuadorSalaries-missing-values-description">El análisis de datos faltantes se centró en las variables clave para el objetivo de la investigación: remuneraciones y empleos, siendo esta última especialmente importante porque su ausencia afecta también a otras 14 variables cuantitativas. Se encontró que los datos faltantes representan el 58.93% del total, lo que implica una pérdida significativa de información con potencial para introducir sesgos.</p><br>
+                        <p data-translate="ecuadorSalaries-missing-values-decision">Debido a la dificultad de imputar valores realistas, se decidió eliminar las observaciones con datos faltantes. Posteriormente, se verificó que los valores de tendencia central y posición permanecieran consistentes tras la eliminación (por ejemplo, la media cambió marginalmente de 5.7 a 5.719). Además, los valores "0" en la variable empleo_hombres y otras relacionadas fueron transformados a NA para indicar la ausencia de empleados y evitar que influyeran en la estadística descriptiva.</p><br>
+                        <p data-translate="ecuadorSalaries-missing-values-final">Tras estas operaciones, el conjunto de datos final quedó reducido a 1,021,029 observaciones y 23 variables.</p>
+                    </li>
+                </ul>
+                
+
+
+
+
+                <h2 data-translate="ecuadorSalaries-analysis-title">Análisis (Analyse)</h2>
+                <ul class="detailed-list">
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-analysis-univariate">Análisis Univariado</h3>
+                        <p data-translate="ecuadorSalaries-analysis-univariate-description">El análisis cualitativo revela que los datos de 2022 y 2023 muestran tendencias consistentes, con predominancia de empresas en los sectores de servicios y comercio, seguidos por industrias manufactureras y agricultura. Las provincias con más empresas son Pichincha, Guayas, Azuay, Manabí y Tungurahua, mientras que los cantones principales incluyen Quito, Guayaquil y Cuenca, con Santo Domingo ocupando el quinto lugar al considerar datos faltantes.</p><br>
+                        <p data-translate="ecuadorSalaries-analysis-univariate-industries">Las clasificaciones industriales (CIIU) permiten segmentar 19 secciones, 85 divisiones y 413 clases, facilitando un análisis detallado por actividad económica, donde los datos faltantes no alteran significativamente las tendencias generales.</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-quantitative-variables">Variables Cuantitativas</h3>
+                        <p data-translate="ecuadorSalaries-quantitative-variables-description">El análisis cuantitativo muestra alta dispersión en las variables relacionadas con el empleo, reflejando la diversidad en el tamaño de las empresas. La variable empleo destaca por una empresa en Guayaquil con 13,218 empleados, mientras que el promedio nacional es de 5.719, evidenciando la influencia de outliers. Las variables empleo_hombres y empleo_mujeres presentan medianas de 1 y promedios de 5 y 4 respectivamente, indicando distribuciones asimétricas con concentración en el rango intercuartílico. Para mitigar la influencia de outliers, se aplicarán transformaciones logarítmicas, dado que estos reflejan la realidad de grandes empresas y no se eliminarán.</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-outliers">Outliers</h3>
+                        <p data-translate="ecuadorSalaries-outliers-description">Se identificaron outliers en las columnas empleo (168,430) y remuneraciones (152,726). Para evaluar si reflejan datos reales, se creó la variable remuneración promedio por empleado, lo que permitirá detectar valores desproporcionados por empleado y distinguir outliers reales de empresas con muchos empleados y alta remuneración total.</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-understanding-outliers">Entendiendo los Outliers</h3>
+                        <p data-translate="ecuadorSalaries-understanding-outliers-description">El análisis revela una relación positiva entre el empleo promedio y las remuneraciones totales, con sectores como servicios e industrias manufactureras destacándose por tener las remuneraciones promedio más altas, mientras que agricultura y construcción presentan las más bajas. Los outliers en remuneraciones se concentran en zonas urbanas como Guayaquil, Quito y Cuenca, y están asociados a actividades económicas específicas, como servicios profesionales y alquiler de maquinaria, que generan ingresos elevados por empleado. Sin embargo, la mayoría de estos outliers corresponden a empresas con un promedio de un empleado, lo que podría reflejar ingresos elevados individuales o errores en los datos.</p><br>
+                        <p data-translate="ecuadorSalaries-understanding-outliers-further-analysis">Es necesario profundizar el análisis con más información sobre las empresas, como su tamaño, contratos y estructura, para validar si estas remuneraciones representan verdaderos ingresos o distorsiones. Esto permitiría identificar patrones y comprender mejor las desigualdades salariales observadas en ciertos sectores y ubicaciones.</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-highest-paid-sectors">Sectores mejor remunerados</h3>
+                        <p data-translate="ecuadorSalaries-highest-paid-sectors-description">El análisis de las clases mejor remuneradas por sector evidencia diferencias significativas al incluir o excluir outliers. Con outliers, se destacan sectores de alta especialización y nichos específicos, como actividades científicas, técnicas y de consultoría, reflejando oportunidades económicas excepcionales. Sin outliers, los resultados ofrecen una visión más representativa del mercado laboral general, priorizando sectores tradicionales como el comercio, las industrias manufactureras y la construcción. Según el propósito del análisis, ambos enfoques aportan valor: los resultados sin outliers son útiles para captar tendencias del mercado en general, mientras que los análisis con outliers son valiosos para identificar áreas con alto potencial económico.</p>
+                    </li>
+                    
+
+                    <figure class="figure">
+                        <img src="/images/proyectos/ecuador-salaries/imagenesInforme/comparacionRemuneracionPorClase" alt="Comparación de promedio de remuneración por clase" class="img">
+                        <figcaption data-translate="ecuadorSalaries-figure1">Figura 1: Comparación de promedio de remuneración por clase.</figcaption>
+                    </figure>
+                    
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-average-salaries-title">Promedio de Remuneraciones</h3>
+                        <p data-translate="ecuadorSalaries-average-salaries-description">El análisis de las remuneraciones promedio por empleado muestra diferencias significativas al considerar o excluir outliers. Con outliers, el promedio asciende a 517,758.29, un valor extraordinariamente alto que refleja el impacto desproporcionado de empresas con remuneraciones extremadamente elevadas. Esto puede sesgar las conclusiones al no representar al conjunto general de datos. En cambio, al excluir los outliers, el promedio se reduce a 8,034.20, proporcionando una visión más precisa y representativa del comportamiento típico de las empresas.</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-salaries-by-sector-title">Remuneraciones por Sector</h3>
+                        <p data-translate="ecuadorSalaries-salaries-by-sector-description">El análisis de remuneraciones por sector muestra que los valores atípicos afectan significativamente los promedios y rankings. El sector de Explotación de minas y canteras lidera consistentemente, pero con una gran brecha entre valores con y sin outliers. El sector de Servicios cae drásticamente al eliminar outliers, reflejando su dependencia de casos extremos. En contraste, Industrias manufactureras y Comercio presentan mayor estabilidad, mientras que Construcción se mantiene como el menos remunerado en ambos escenarios. La influencia de valores extremos en Agricultura resalta la importancia de analizar subsectores para comprender mejor la distribución salarial.</p>
+                    </li>
+                    
+                    <figure class="figure">
+                        <img src="/images/proyectos/ecuador-salaries/imagenesInforme/Remuneraciones por Sector" alt="Remuneraciones por Sector" class="img">
+                        <figcaption data-translate="ecuadorSalaries-figure2">Figura 2: Remuneraciones por Sector.</figcaption>
+                    </figure>
+                    
+
+
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-outliers-mining-sector-title">Outliers en Sector Minas</h3>
+                        <p data-translate="ecuadorSalaries-outliers-mining-sector-description">En el sector de Minas, los outliers exageran la escala de remuneraciones, ocultando relaciones regulares y dando la impresión de una industria altamente remunerada pero desigual. Sin ellos, se observa una distribución más uniforme que refleja mejor la realidad del sector. En Servicios, los outliers elevan artificialmente las remuneraciones promedio, posicionándolo como uno de los sectores más lucrativos; sin embargo, al eliminarlos, el sector se ubica entre los menos remunerados, evidenciando que la mayoría de las empresas tienen empleos de baja remuneración.</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-salary-gender-sector-comparison-title">Comparación de remuneración promedio por género y sector (con vs sin outliers)</h3>
+                        <p data-translate="ecuadorSalaries-salary-gender-sector-comparison-description">El análisis revela que la brecha salarial de género es evidente en todos los sectores, pero con una variabilidad significativa según el sector. Algunos sectores presentan brechas salariales más amplias (como Explotación de Minas y Canteras), mientras que otros tienen una diferencia menos pronunciada (como Servicios). La eliminación de los outliers ajusta las percepciones de la magnitud de la brecha, y permite una observación más precisa del impacto de los valores extremos en los análisis salariales. Sin embargo, incluso sin outliers, la desigualdad salarial por género sigue siendo una cuestión importante en la mayoría de los sectores.</p>
+                    </li>
+                    
+                    <figure class="figure">
+                        <img src="/images/proyectos/ecuador-salaries/imagenesInforme/Comparación de remuneración promedio por género" alt="Comparación de remuneración promedio por género y sector (con vs sin outliers)" class="img">
+                        <figcaption data-translate="ecuadorSalaries-figure3">Figura 3: Comparación de remuneración promedio por género y sector (con vs sin outliers).</figcaption>
+                    </figure>
+                    
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-top-paid-occupations-title">Clases de trabajo con mejor remuneracion</h3>
+                        <p data-translate="ecuadorSalaries-top-paid-occupations-description">En Ecuador, las clases de trabajo con las mejores remuneraciones para hombres están dominadas por sectores como la extracción de petróleo crudo, relaciones exteriores, y actividades de planes de seguridad social, con salarios significativamente más altos en comparación con las mujeres. A pesar de que las mujeres también tienen acceso a sectores bien remunerados como relaciones exteriores y actividades de planes de seguridad social, la brecha salarial sigue siendo evidente, especialmente en sectores claves como la industria petrolera.</p>
+                    </li>
+                    
+                    <figure class="figure">
+                        <img src="/images/proyectos/ecuador-salaries/imagenesInforme/Top 5 Clases de Trabajo Mejor Remuneradas (Con Outliers)" alt="Top 5 Clases de Trabajo Mejor Remuneradas (Con Outliers)" class="img">
+                        <figcaption data-translate="ecuadorSalaries-figure4">Figura 4: Top 5 Clases de Trabajo Mejor Remuneradas (Con Outliers).</figcaption>
+                    </figure>
+                    
+
+                    <figure class="figure">
+                        <img src="/images/proyectos/ecuador-salaries/imagenesInforme/Top 5 Clases de Trabajo Mejor Remuneradas (Sin Outliers)" alt="Top 5 Clases de Trabajo Mejor Remuneradas (Sin Outliers)" class="img" data-translate="ecuadorSalaries-figure5">
+                        <figcaption data-translate="ecuadorSalaries-figure5-caption">Figura 5: Top 5 Clases de Trabajo Mejor Remuneradas (Sin Outliers).</figcaption>
+                    </figure>
+                    
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-job-comparison-title">Comparación de Empleo por Sector</h3>
+                        <p data-translate="ecuadorSalaries-job-comparison-description">Desbalance de Género: En la mayoría de los sectores, los hombres superan ampliamente a las mujeres en términos de empleo total. Sin embargo, al eliminar los outliers, las proporciones de género en los sectores se vuelven más equilibradas, lo que sugiere que los valores extremos (outliers) en los datos influyen significativamente en la visualización de estas diferencias. Los sectores: Construcción y Explotación de Minas y Canteras muestran un gran desbalance de género.</p>
+                    </li>
+                    
+                    <figure class="figure">
+                        <img src="/images/proyectos/ecuador-salaries/imagenesInforme/Comparación de Empleo por Sector (Hombres vs Mujeres)" alt="Comparación de Empleo por Sector (Hombres vs Mujeres)" class="img" data-translate="ecuadorSalaries-job-sector-comparison">
+                        <figcaption data-translate="ecuadorSalaries-job-sector-comparison-caption">Figura 6: Comparación de Empleo por Sector (Hombres vs Mujeres).</figcaption>
+                    </figure>
+                    
+                    <h2 data-translate="ecuadorSalaries-share">Compartir</h2>
+                    
+                    <div class="tableauPlaceholder" style="overflow-x: auto; overflow-y: hidden; white-space: nowrap; width: 100%; height: 800px; max-width: 100%; border: 1px solid #ccc;">
+                        <iframe 
+                            src="https://guinansacaw.shinyapps.io/dashecuadorsalaries/" 
+                            style="min-width: 1600px; height: 100%; border: none; display: inline-block;">
+                        </iframe>
+                    </div>
+                </ul>
+                    
+                
+                
+            
+
+
+
+                <h1 data-translate="ecuadorSalaries-conclusions-title">Conclusiones</h1>
+                <ul class="detailed-list">
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-outliers-impact-title">Impacto de los Outliers</h3>
+                        <p data-translate="ecuadorSalaries-outliers-impact-description">Los outliers tienen un efecto significativo en las métricas clave, como remuneraciones promedio y distribución de empleados por género y sector. Al incluir outliers, las cifras presentan una distorsión que dificulta interpretar las tendencias reales. Al eliminarlos, los datos muestran una visión más precisa y manejable, permitiendo identificar patrones y desbalances de género o sector de manera más confiable.</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-gender-salary-gap-title">Brecha Salarial por Género</h3>
+                        <p data-translate="ecuadorSalaries-gender-salary-gap-description">Existe una brecha salarial notable entre hombres y mujeres en la mayoría de los sectores. En sectores como "Servicios" y "Agricultura", las mujeres reciben salarios promedio considerablemente más bajos que los hombres. Sin embargo, al ajustar los datos eliminando outliers, la magnitud de esta brecha se reduce, pero persiste.</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-sectors-best-paid-title">Sectores y Clases de Trabajo con Mejores Remuneraciones</h3>
+                        <p data-translate="ecuadorSalaries-sectors-best-paid-description">Los sectores de "Explotación de Minas y Canteras" y "Relaciones Exteriores" ofrecen las remuneraciones más altas para hombres y mujeres respectivamente. Al analizar las clases de trabajo, actividades relacionadas con defensa, petróleo, y regulación de organismos también destacaron como las mejores remuneradas.</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="ecuadorSalaries-employment-distribution-title">Distribución de Empleo por Género</h3>
+                        <p data-translate="ecuadorSalaries-employment-distribution-description">Los sectores como "Agricultura" y "Comercio" presentan una mayor cantidad de empleados tanto hombres como mujeres, aunque en términos proporcionales los hombres tienden a estar sobrerrepresentados en sectores como "Construcción" y "Minas y Canteras". Sectores como "Servicios" presentan una distribución más equilibrada entre ambos géneros.</p>
+                    </li>
+                </ul>
+                    
+                
+            </div>
+        </section>
+    </main>
+    
+    
+
+
+
+    <a href="/#contact" class="floating-btn" data-translate="float-btn-contact">Contáctame</a>
+
+
+
+
+    <hr class="borde">
+
+    <footer id="footer">
+        <div class="container">
+            <p><small data-translate="footer_more_about">More about:</small></p>
+            <div class="img-footer">
+                <div class="img-footer-1">
+                    <a href="https://www.coursera.org/learner/guinansacaw" target="_blank"><img src="/images/redessociales/coursera.svg" alt="Coursera"></a>
+                </div>
+                <div class="img-footer-2">
+                    <img src="/images/redessociales/datacamp.svg" alt="">
+                </div>
+                <div class="img-footer-3">
+                    <a href="https://www.kaggle.com/guinansacaw" target="_blank"><img src="/images/redessociales/kaggle.svg" alt="Kaggle"></a>
+                </div>
+            </div>
+            <p><small>
+                <img src="/images/pajaro_rojo.png" alt=""> &copy; All rights reserved - William Guiñansaca <img src="/images/pajaro_rojo.png" alt="">
+            </small></p>
+        </div>
+    </footer>
+
+    <script src="/js/translations.js"></script>
+    <script src="/js/menu-header.js"></script>
+</body>

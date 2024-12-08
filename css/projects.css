@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: #fcfcfc;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/*--------------------------------------------------------------------*/
+
+
+
+
+
+/*---------------------------------------------------------------------*/
+
+
+/* Contenedor de la tabla */
+.table-container {
+    max-width: 100%;
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    margin: 20px 0; /* Márgenes superiores e inferiores */
+}
+
+/* Estilo básico para la tabla */
+table {
+    width: 100%; /* La tabla ocupa el 100% del ancho disponible */
+    border-collapse: collapse; /* Evita bordes duplicados */
+}
+
+/* Estilo para las celdas */
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd; /* Borde sutil para las celdas */
+}
+
+/* Estilo para los encabezados */
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Resaltar las filas al pasar el ratón */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+
+/*------------------------------------------------------------------*/
+
+
+html {
+    font-size: 16px;
+}
+h1 {
+font-size: 1.5rem;
+}
+h2 {
+font-size: 1.25rem;
+}
+h3 {
+font-size: 1.15rem;
+}
+body {
+font-size: 1rem;
+}
+a {
+    color: #000;
+    white-space: normal;
+    word-wrap: break-word; /* o word-break: break-word; */
+}
+
+/*-----------------------------------------------------------------*/
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fcfcfc; /* Cambia el color de fondo según tu diseño */
+    z-index: 999;
+    border-bottom: 1px solid #d7d1d1;
+}
+
+header .logo {
+    margin: 0;
+    padding: 25px 30px;
+}
+
+header .container .language {
+    border: none;
+    font-size: 16px;
+}
+
+header .container .menu img {
+    width: 100%;
+    height: 3vh;
+    object-fit: cover;
+}
+
+
+
+.men-u-icono img {
+    max-width: 35px;
+    height: auto;
+    cursor: pointer;
+    display: none;
+}
+
+#men-u {
+    display: none;
+}
+
+header .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+header .menu ul li a:hover {
+    color: #C90B4A;
+}
+
+
+
+header .menu ul li:hover {
+    color: #C90B4A;
+    transform: scale(1.05);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+header img {
+    max-width: 18px;
+    vertical-align: -3px;
+} 
+
+.language {
+    cursor: pointer;
+    background-color: #fcfcfc;
+}
+
+.bi-globe2 {
+    font-size: 16px; /* Tamaño del ícono */
+    color: #333333; /* Color del ícono */
+}
+
+.language:focus {
+    outline: none; /* Elimina el contorno por defecto */
+}
+
+/*-------------------------------------------------------------------------*/
+
+.borde {
+    border-top: 1px solid #d7d1d1;
+}
+
+#footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer .container p {
+    padding: 1px 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#footer .img-footer {
+    display: flex;
+    gap: 35px;
+}
+
+#footer .img-footer img {
+    max-width: 25px;
+}
+
+#footer p img {
+    max-width: 16px;
+    vertical-align: -3px;
+}
+
+/*-------------------------------------------------------------------------------------*/
+
+#content .container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 1200px; /* Limita el ancho en pantallas grandes */
+    margin: auto; /* Centra el contenido */
+}
+
+#content .container a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+#content .container h1::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.5px; /* Ajusta el grosor de la línea */
+    background-color: #d7d1d1; /* Ajusta el color de la línea */
+    margin-top: 10px; /* Ajusta el margen superior de la línea */
+}
+
+
+/*-----------------------------------------------------------*/
+
+
+/* Estilo del anchor */
+.simple-link {
+    text-decoration: underline; /* Subrayado */
+    font-weight: bold; /* Negrita */
+    font-size: 1rem; /* Tamaño del texto */
+}
+
+
+/*-----------------------------------------------------------*/
+
+.tableauPlaceholder {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: auto; /* Agrega scroll si es necesario */
+}
+
+.tableauPlaceholder object {
+    width: 100%;
+    height: 1500px; /* Altura suficiente para mostrar el contenido */
+}
+
+
+/*--------------------------------------------------------------*/
+
+.minimal-list {
+    list-style-type: disc; /* O puedes usar circle, square */
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.minimal-list li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.minimal-list li::marker { /* Personalización del marcador */
+    color: #000;
+    font-size: 1.2rem;
+}
+
+
+/*---------------------------------------------------------------*/
+
+.detailed-list {
+    list-style: none; /* Elimina los marcadores por defecto */
+    padding: 0;
+    margin: 20px 0;
+}
+
+.detailed-list li {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+.detailed-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.detailed-list h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.detailed-list p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/*---------------------------------------------------------------*/
+
+.figure {
+    margin: 20px 0; /* Espaciado alrededor de las imágenes */
+    text-align: center; /* Centra las imágenes dentro del contenedor */
+}
+
+.img {
+    max-width: 100%; /* Asegura que las imágenes no se desborden */
+    height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+
+/*---------------------------------------------------------------*/
+
+
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(188, 14, 14);
+    color: white;
+    padding: 0.8em 1.2em;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+  }
+  
+  .floating-btn:hover {
+    background-color: rgb(216, 27, 27);
+  }
+
+
+/*-------------------------------------------------------------*/
+
+@media(max-width:991px){
+    .men-u-icono {
+        padding: 0 5px;
+    }
+    header .container .logo {
+        padding-left: 5px;
+    }
+    .men-u-icono img {
+        display: initial;
+    }
+    header .menu ul {
+        flex-direction: column;
+    }
+    header .menu ul li{
+        margin: 25px 0;
+    }
+    header .menu ul li a {
+        font-size: 20px;
+    }
+    .menu {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 61px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.98);
+        display: none;
+    }
+    #men-u:checked ~ .menu {
+        display: initial;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+    }
+
+    h3 {
+        font-size: 1.10rem;
+    }
+
+    .table-container {
+        overflow-x: auto;
+        margin: 20px;
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    th {
+        font-size: 16px;
+    }
+
+
+    .minimal-list {
+        padding-left: 1rem; /* Reduce el padding */
+    }
+
+}
+
+
+
+
+
+/* #call-to-action {
+    text-align: center;
+    padding: 2em;
+    background-color: #f8f9fa;
+    margin-top: 2em;
+  }
+  
+  .cta-buttons .btn {
+    margin: 0.5em;
+    padding: 0.8em 1.5em;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .cta-buttons .btn:hover {
+    background-color: #0056b3;
+  } */  

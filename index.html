@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <title data-translate="title">William Guiñansaca - Data Analyst</title>
+    <title data-translate="title">William Guiñansaca - Data Analyst Portfolio</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script type="text/javascript">
     emailjs.init('AfFz2gK8zyvPmp6lV')
     </script>
     <meta name="description" content="Data Analyst Portfolio: Here you'll find projects related to Python, RStudio, SQL, statistics, supervised and unsupervised learning techniques.">
     <meta name="keywords" content="portfolio, data analyst, google data analitycs, data analysis">
- </head>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -28,9 +28,10 @@
             <nav class="menu">
                 <ul>
                     <li>
+                        <i class="bi bi-globe2"></i>
                         <select id="lang-selector" class="language">
-                            <option value="en">En</option>
-                            <option value="es">Es</option>
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
                         </select>
                     </li>
                     <li><a href="#home" data-translate="menu_home">Home</a></li>
@@ -44,6 +45,11 @@
 
     <main>
 
+
+
+
+
+        
     <section id="home">
         <div class="container">
             <div class="tittle">
@@ -61,19 +67,19 @@
         <div class="container-icons">
             <div class="icon-item">
                 <img src="images/programas/icons8-configuración-de-datos-96.png" alt="SQL Icon">
-                <p>SQL</p>
+                <p><strong>SQL</strong></p>
             </div>
             <div class="icon-item">
                 <img src="images/programas/icons8-power-bi.svg" alt="Power BI Icon">
-                <p>Power BI</p>
+                <p><strong>Power BI</strong></p>
             </div>
             <div class="icon-item">
                 <img src="images/programas/icons8-logotipo-de-rstudio.svg" alt="RStudio Icon">
-                <p>Rstudio</p>
+                <p><strong>Rstudio</strong></p>
             </div>
             <div class="icon-item">
                 <img src="images/programas/icons8-python.svg" alt="Python Icon">
-                <p>Python</p>
+                <p><strong>Python</strong></p>
             </div>
         </div>
     </section>
@@ -88,65 +94,72 @@
     <section id="about">
         <div class="container">
             <div class="about-text">
-                <div>
-                    <h2 data-translate="about_title">About me</h2>
-                </div>
-                <div>
-                    <p data-translate="about_intro">I have developed skills in coding, storytelling, and data viz. Over the past year, I have been involved in projects and learning data analysis using software such as Excel, Oracle PL/SQL, statistical tools like RStudio/Python, and business intelligence tools such as Power BI and Tableau.</p>
-                </div>
-                <div>
-                    <h3 data-translate="about_skills_title">Techniques & Skills:</h3>
-                </div>
-
+                <h2 data-translate="about_title">About me</h2>
+                <p data-translate="about_intro">I have developed skills in coding, storytelling, and data viz. Over the past year, I have been involved in projects and learning data analysis using software such as Excel, Oracle PL/SQL, statistical tools like RStudio/Python, and business intelligence tools such as Power BI and Tableau.</p>
+                <h3 data-translate="about_skills_title">Techniques & Skills:</h3>
                 <div class="about-techniques">
-                    <div class="about-number">01</div>
-                    <div>
-                        <p data-translate="about_skills1">Statistics & Probability </p>
+                    <div class="skill-item">
+                        <div class="about-number">01</div>
+                        <p data-translate="about_skills1">Statistics & Probability</p>
                     </div>
-                    <div class="about-number">02</div>
-                    <div>
+                    <div class="skill-item">
+                        <div class="about-number">02</div>
                         <p data-translate="about_skills2">Supervised learning (regression, classification)</p>
-                    </div> 
-                    <div class="about-number">03</div>
-                    <div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="about-number">03</div>
                         <p data-translate="about_skills3">Unsupervised learning (clustering)</p>
                     </div>
-                    <div class="about-number">04</div>
-                    <div>
+                    <div class="skill-item">
+                        <div class="about-number">04</div>
                         <p data-translate="about_skills4">Big Data</p>
                     </div>
-                </div> 
+                </div>
             </div>
             <div class="img-profile">
                 <img src="images/perfil/perfil.png" alt="Profile Image">
             </div>
         </div>
     </section>
+    
+
+
+
+
 
     <section id="portfolio">
         <h2 data-translate="portfolio_title">Portfolio</h2>
         <div class="container">
             <div class="projects">
-                <img src="images/proyectos/cyclistic.png" alt="">
-                <h4 data-translate="portfolio_project1_title">Customer Satisfaction</h4>
+                <img src="images/proyectos/bank-segmentation/customerProfiling-pp.png" alt="Customer Profiling">
+                <h4 data-translate="portfolio_project1_title">Segmentación de Clientes</h4>
                 <p data-translate="portfolio_project1_desc">Lorem ipsum dolor sit.</p>
-                <a href="#" data-translate="portfolio_project1_link">More details &#8594;</a>
+                <a href="/projects/customer-profiling-data-analysis.html" data-translate="portfolio_project1_link">More details &#8594;</a>
             </div>
             <div class="projects">
-                <img src="images/proyectos/bellabeat.png" alt="Bellabeat - Google Data Analytics">
+                <img src="images/proyectos/ecuador-salaries/imagenSalariosEcuador-pp.png" alt="Remuneraciones por tipo de Empleo en Ecuador">
+                <h4 data-translate="portfolio_project4_title">Remuneraciones por tipo de Empleo en Ecuador</h4>
+                <p data-translate="portfolio_project4_desc">Rstudio, EDA, Dashboard, Shiny</p>
+                <a href="/projects/ecuador-salaries-data-analysis.html" data-translate="portfolio_project4_link">More details &#8594;</a>
+            </div>
+            <div class="projects">
+                <img src="images/proyectos/bellabeat/bellabeat-pp.png" alt="Bellabeat - Google Data Analytics">
                 <h4 data-translate="portfolio_project2_title">Bellabeat - Google Analytics Certification</h4>
                 <p data-translate="portfolio_project2_desc">Rstudio, Tableau</p>
-                <a href="https://github.com/guinansacaw/bellabeat_case_study" target="_blank" data-translate="portfolio_project2_link">More details &#8594;</a>
+                <a href="/projects/bellabeat-data-analysis.html" data-translate="portfolio_project2_link">More details &#8594;</a>
             </div>
             <div class="projects">
-                <img src="images/proyectos/cyclistic.png" alt="Cyclistic - Google Data Analytics">
+                <img src="images/proyectos/cyclistic/cyclistic-pp.png" alt="Cyclistic - Google Data Analytics">
                 <h4 data-translate="portfolio_project3_title">Cyclistic - Google Analytics Certification</h4>
                 <p data-translate="portfolio_project3_desc">Rstudio, Tableau</p>
-                <a href="https://github.com/guinansacaw/cyclistic_case_study" target="_blank" data-translate="portfolio_project3_link">More details &#8594;</a>
+                <a href="/projects/cyclistic-data-analysis.html" data-translate="portfolio_project3_link">More details &#8594;</a>
             </div>
         </div>
     </section>
 
+
+
+    
     <section id="contact">
         <h2 data-translate="contact_title">Get In Touch</h2>
         <div class="container">
@@ -154,7 +167,7 @@
                 <label for="from_name" data-translate="contact_name_label">Name</label>
                 <input type="text" id="from_name" name="from_name" placeholder="Your Name..." required>
                 <label for="email_id" data-translate="contact_email_label">Email</label>
-                <input type="email" id="email_id" name="email_id" placeholder="example@yourmail.com" required>
+                <input type="email" id="email_id" name="email_id" placeholder="example@yourmail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                 <label for="subject" data-translate="contact_subject_label">Subject</label>
                 <input type="text" id="subject" name="subject" placeholder="Title..." required>
                 <label for="message" data-translate="contact_message_label">Message</label>
@@ -181,6 +194,9 @@
             </div>
         </div>
     </section>
+
+
+    
 
     </main>
 

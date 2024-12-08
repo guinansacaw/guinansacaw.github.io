@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/projects.css">
+    <title data-translate="customerprofiling-title-page">Customer Profiling - Data Analysis</title>
+    <meta name="description" content="Customer Profiling - Data Analysis, Python, statistics, data analysis, descriptive analysis, machine learning, clustering">
+    <meta name="keywords" content="portfolio, data analyst, customer profiling, market segmentation, customer targeting, machine learning, clustering">
+    <meta property="og:title" content="Customer Profiling - Data Analysis">
+    <meta property="og:description" content="Customer Profiling - Data Analysis, Python, statistics, data analysis, descriptive analysis, machine learning, clustering">
+    <!-- <meta property="og:image" content=""> -->
+    <meta property="og:url" content="https://guinansacaw.github.io/projects/customer-profiling-data-analysis">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <p class="logo">
+                <img src="/images/pajaro_rojo.png" alt=""> William Guiñansaca
+            </p>
+            
+            <input type="checkbox" id="men-u"/>
+            <label for="men-u" class="men-u-icono">
+                <img src="/images/menu3.png" alt="">
+            </label>
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <i class="bi bi-globe2"></i>
+                        <select id="lang-selector" class="language">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                        </select>
+                    </li>
+                    <li><a href="/#home" data-translate="menu_home">Home</a></li>
+                    <li><a href="/#about" data-translate="menu_about">About</a></li>
+                    <li><a href="/#portfolio" data-translate="menu_portfolio">Portfolio</a></li>
+                    <li><a href="/#contact" data-translate="menu_contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+        <section id="content">
+            <div class="container">
+                <img src="/images/proyectos/bank-segmentation/customer-profiling-portada.png" alt="Bank Credit">
+                <figcaption>
+                    <small>
+                        <span data-translate="customer-profiling-photo-description">Foto de</span>
+                        <a href="https://unsplash.com/es/@b0rno?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" data-translate="customer-profiling-photo-author">Ryan Born</a>
+                        <span data-translate="customer-profiling-photo-platform">en</span>
+                        <a href="https://unsplash.com/es/fotos/foto-de-primer-plano-de-la-tarjeta-de-visita-de-american-express-en-superficie-marron-x8i6FfaZAbs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" data-translate="customer-profiling-photo-link">Unsplash</a>
+                    </small>                    
+                </figcaption>
+                <!-- Distribution of Remunerations in Ecuador -->
+
+                <h1 data-translate="customer-profiling-title">Aprendizaje no supervisado: Segmentación de Clientes</h1>
+                <p data-translate="customer-profiling-intro">Este proyecto de análisis de datos incluye diversas tareas realizadas en Python como:</p>
+                <ul class="minimal-list">
+                    <li data-translate="customer-profiling-list[0]"><strong>Limpieza de datos:</strong> Identificación y eliminación de valores nulos, así como la normalización de variables.</li>
+                    <li data-translate="customer-profiling-list[1]"><strong>Selección de características:</strong> Se seleccionaron las variables más relevantes para el modelo.</li>
+                    <li data-translate="customer-profiling-list[2]"><strong>Aplicación de técnicas de clustering:</strong> Implementación del algoritmo K-Means para segmentar a los clientes.</li>
+                    <li data-translate="customer-profiling-list[3]"><strong>Validación del modelo:</strong> Evaluación de la calidad de los clusters mediante el uso de métricas como el Silhouette Score.</li>
+                    <li data-translate="customer-profiling-list[4]"><strong>Visualización:</strong> Se utilizaron gráficos como el PCA (Análisis de Componentes Principales) y TSNE para visualizar los clusters en un espacio reducido.</li>
+                </ul>
+
+
+                <h2 data-translate="customer-profiling-dataset-title">Acerca del conjunto de datos</h2>
+                <p data-translate="customer-profiling-dataset-info">
+                    Este proyecto utiliza el conjunto de datos 
+                    <em>South German Credit</em> 
+                    proporcionado por el 
+                    <a href="https://archive.ics.uci.edu/" target="_blank" class="simple-link">UCI Machine Learning Repository</a> (2020), bajo licencia adecuada para uso público y académico. Para más información, consulta el DOI en el siguiente 
+                    <a href="https://doi.org/10.24432/C5QG88" target="_blank" class="simple-link">link</a>.
+                </p>
+
+                <h2 data-translate="customer-profiling-code-title">Sobre el código completo y documentación</h2>
+                <p data-translate="customer-profiling-code-info">
+                    Si deseas revisar el código completo del proyecto, incluyendo el preprocesamiento de datos, la implementación de algoritmos y la generación de visualizaciones, puedes visitar mi repositorio en  
+                    <a href="https://github.com/guinansacaw/segmentacionDeClientesBanco/blob/main/proyectofinal2.ipynb" class="simple-link">GitHub</a>. El conjunto de datos <em>South German Credit</em> no está incluido directamente en el repositorio. Para obtenerlo, visita la fuente de los datos antes mencionada.
+                </p>
+
+                
+                
+                
+                <h1 data-translate="customer-profiling-summary-title">Resumen</h1>
+                <p data-translate="customer-profiling-summary-content">
+                    <i>
+                        En este proyecto, abordamos la segmentación de clientes utilizando técnicas de aprendizaje
+                        automático no supervisado, centrándonos en la aplicación del algoritmo K-Means. El conjunto
+                        de datos, derivado de un contexto bancario, pasó por pasos de preprocesamiento como la normalización,
+                        la reducción de dimensionalidad utilizando Análisis de Componentes Principales
+                        (PCA) y el manejo de valores atípicos para asegurar la calidad de los datos. La calidad del
+                        agrupamiento se evaluó utilizando el índice de Silhouette en múltiples configuraciones de clusters.
+                        Los resultados revelan clusters bien definidos que destacan perfiles de clientes distintos,
+                        útiles para diversas aplicaciones como estrategias de marketing. El estudio demuestra la efectividad
+                        de K-Means en la identificación de patrones en los datos de clientes, ofreciendo una
+                        base para procesos de toma de decisiones basados en datos.
+                    </i>
+                </p>
+
+                <h1 data-translate="customer-profiling-introduction-title">Introducción</h1>
+                <p data-translate="customer-profiling-introduction-content">
+                    El objetivo principal es identificar clusters que representen a grupos con perfiles
+                    similares de clientes. Para lo cuál, se realizó un preprocesamiento de los datos, que incluyó la
+                    normalización de variables, la reducción de dimensionalidad mediante PCA, y la evaluación de la
+                    calidad del clustering con la métrica Silhouette. Los resultados obtenidos nos permiten ver como
+                    los clientes pueden ser agrupados y etiquetados para la futura toma de desiciones.
+                </p>
+
+
+
+                <h1 data-translate="customer-profiling-dataset-title1">Descripción del Dataset</h1>
+                <p data-translate="customer-profiling-dataset-content">
+                    El dataset SouthGermanCredit fue utilizado para el proyecto y contiene información financiera
+                    de varios clientes. Existen 1000 instancias que fueron divididas en conjuntos de entrenamiento y prueba con una proporción de 80:20, respectivamente. De las 21 variables, se tomaron 20 características
+                    entre variables numéricas y categóricas. La variable objetivo es el riesgo de crédito,
+                    clasificado en bajo y alto.
+                </p>
+
+                <ul class="detailed-list">
+                    <li>
+                        <h3 data-translate="customer-profiling-preprocessing-title">Pre-procesamiento de Datos</h3>
+                        <p data-translate="customer-profiling-preprocessing-content">
+                            Se realizó un análisis para detectar valores faltantes, y se confirmó que no existían valores nulos en el conjunto de datos. Posteriormente, las variables categóricas fueron codificadas utilizando las técnicas de One-Hot Encoding y LabelEncoder, lo que expandió el número de características a un total de 72 columnas. Además, las variables numéricas seleccionadas, como duración, monto y edad, fueron escaladas mediante la técnica de normalización StandardScaler, garantizando una adecuada preparación de los datos para los algoritmos de machine learning.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 data-translate="customer-profiling-transformations-title">Transformaciones Aplicadas</h3>
+                        <p data-translate="customer-profiling-transformations-content">
+                            Se aplicó el Análisis de Componentes Principales (PCA) únicamente para graficar los resultados del clustering y facilitar su interpretación. Asimismo, se utilizó la técnica t-Distributed Stochastic Neighbor Embedding (t-SNE) con el objetivo de visualizar las relaciones y agrupamientos en un espacio de menor dimensionalidad, sin que estas técnicas se emplearan para reducir las dimensiones de los datos originales.
+                        </p>
+                    </li>
+                </ul>
+
+
+
+
+                <h1 data-translate="customer-profiling-methodology-title">Metodología</h1>
+                <ul class="detailed-list">
+                    <li>
+                        <h3 data-translate="customer-profiling-methodology-preprocessing-title">Pre-procesamiento de Datos</h3>
+                        <p data-translate="customer-profiling-methodology-preprocessing-content">Antes de introducir los datos en el modelo, se realizó un preprocesamiento para garantizar la calidad y consistencia del análisis. En primer lugar, se llevó a cabo una revisión de los datos faltantes y se confirmó que no existían valores nulos. Las variables numéricas, que presentaban un sesgo positivo hacia la derecha, fueron transformadas mediante la raíz cuadrada para mejorar su distribución. Las variables categóricas se codificaron utilizando las técnicas de One-Hot Encoding y LabelEncoder, mientras que las variables numéricas y ordinales, como duración de empleo, tasa de la cuota, residencia actual y número de créditos, fueron escaladas utilizando StandardScaler. Además, se detectaron outliers en las variables de monto del crédito y edad del cliente empleando boxplots y z-scores; dado que los valores atípicos no eran extremos, fueron tratados igualmente con StandardScaler. Por último, se realizó un análisis de correlación para identificar relaciones significativas entre las variables.</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="customer-profiling-methodology-clustering-title">Implementación y Configuración de Modelos de Clustering</h3>
+                        <p data-translate="customer-profiling-methodology-clustering-content">Se evaluaron tres enfoques principales. En primer lugar, se utilizó el algoritmo K-Means, ajustando diferentes valores de k para optimizar el número de clusters y garantizar una segmentación efectiva. En segundo lugar, se aplicó Agglomerative Clustering, explorando diversos valores de hiperparámetros como el método de enlace (linkage), la métrica de distancia y el número de clusters (k). Por último, se implementó el algoritmo DBSCAN, probando distintas configuraciones del parámetro eps para identificar el mejor desempeño en la agrupación de datos.</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="customer-profiling-methodology-validation-title">Evaluación y Validación de los Modelos</h3>
+                        <p data-translate="customer-profiling-methodology-validation-content">La evaluación y validación de los modelos se calculó el Silhouette Score para cada modelo, lo que permitió medir la cohesión y separación de los clusters, identificando qué tan bien definidos estaban en el espacio de características. Además, se empleó validación cruzada mediante el método de bootstrap, lo que permitió analizar el rendimiento y la estabilidad del clustering a través de múltiples muestras, asegurando la robustez de los resultados obtenidos.</p>
+                    </li>
+                    <li>
+                        <h3 data-translate="customer-profiling-methodology-labeling-title">Etiquetado de Clusters</h3>
+                        <p data-translate="customer-profiling-methodology-labeling-content">Finalmente, el modelo mejor evaluado (K-means) fue seleccionado y se analizó los clusters con
+                            gráficos de coordenadas paralelas y estadísticas descriptivas. El análisis permitió etiquetar a cada
+                            cluster al poder interpretar el comportamiento de los grupos de clientes.</p>
+                    </li>
+                </ul>
+
+
+
+
+                <h1 data-translate="customer-profiling-results-discussion">Resultados y Discusión</h1>
+                <h2 data-translate="customer-profiling-model-performance">Rendimiento de los Modelos</h2>
+                <ul class="minimal-list">
+                    <li data-translate="customer-profiling-kmeans">K-Means: El modelo de K-Means con k = 5 clusters fue el que mejor rendimiento presentó, con un Silhouette Score promedio de 0.075 en la validación cruzada por bootstrap. Este valor, aunque es bajo, muestra una clara superioridad frente a los otros modelos.</li>
+                    <li data-translate="customer-profiling-agglomerative-clustering">Agglomerative Clustering: Aunque este modelo también fue capaz de formar clusters con una separación aceptable (Silhouette Score promedio de 0.052), los resultados fueron inferiores a los obtenidos con K-Means.</li>
+                    <li data-translate="customer-profiling-dbscan">DBSCAN: Este modelo no logró formar clusters significativos debido a la densidad variable de los datos, lo que resultó en un bajo rendimiento general.</li>
+                </ul>
+
+
+
+
+                <h2 data-translate="customer-profiling-dimension-reduction-visualization">Reducción de Dimensionalidad y Visualización</h2>
+                <p data-translate="customer-profiling-dimension-reduction-techniques">Las técnicas de reducción de dimensionalidad como PCA y T-SNE se emplearon para visualizar la estructura de los datos en un espacio de menor dimensión. Las Figuras 1 y 2 muestran la proyección bidimensional de los clusters obtenidos: Como se puede observar, los clusters formados por K-Means y Agglomerative Clustering están bien definidos en los gráficos. Para la evaluación del modelo, se realiza la validación cruzada, como muestra la Figura 3, donde se observa un mejor rendimiento de Silhouette Scores del modelo K-Means.</p>
+
+
+
+                <!-- Imagen de la Figura 1 (gráfico de PCA) -->
+                <figure class="figure">
+                    <img src="/images/proyectos/bank-segmentation/imagenesInforme/pca.png" alt="Proyección bidimensional de los clusters con PCA" class="img">
+                    <figcaption data-translate="customer-profiling-figure-1">Figura 1: Proyección bidimensional de los clusters obtenidos con PCA.</figcaption>
+                </figure>
+
+                <!-- Imagen de la Figura 2 (gráfico de T-SNE) -->
+                <figure class="figure">
+                    <img src="/images/proyectos/bank-segmentation/imagenesInforme/tsne.png" alt="Proyección bidimensional de los clusters con T-SNE" class="img">
+                    <figcaption data-translate="customer-profiling-figure-2">Figura 2: Proyección bidimensional de los clusters obtenidos con T-SNE.</figcaption>
+                </figure>
+
+                <!-- Imagen de la Figura 3 (gráfico de validación cruzada con K-Means) -->
+                <figure class="figure">
+                    <img src="/images/proyectos/bank-segmentation/imagenesInforme/validacion_cruzada.png" alt="Silhouette Score de K-Means en validación cruzada" class="img">
+                    <figcaption data-translate="customer-profiling-figure-3">Figura 3: Silhouette Score de K-Means en validación cruzada.</figcaption>
+                </figure>
+
+
+                <h2 data-translate="customer-profiling-cluster-analysis-title">Análisis de los Perfiles de Clusters</h2>
+                <p data-translate="customer-profiling-cluster-analysis-text">Una vez seleccionado el modelo K-Means con 5 clusters, se realizó un análisis de cada cluster. La Figura 4 muestra el comportamiento del agrupamiento en determinadas variables. Además, las estadísticas descriptivas para cada cluster revelaron diferencias significativas en variables como: la duración del crédito, el monto solicitado y la edad del cliente como indica la Tabla 1.</p>
+
+
+                <figure class="figure">
+                    <img src="/images/proyectos/bank-segmentation/imagenesInforme/coordenadas_paralelas.png" alt="Gráfico de Coordenadas Paralelas." class="img">
+                    <figcaption data-translate="customer-profiling-figure-4">Figura 4: Gráfico de Coordenadas Paralelas.</figcaption>
+                </figure>
+
+
+                <h2 data-translate="customer-profiling-table-1">Tabla 1: Estadísticas descriptivas de los clusters (K-Means)</h2>
+                <div class="table-container">
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Variable</th>
+                                <th>Estadístico</th>
+                                <th>Cluster 0</th>
+                                <th>Cluster 1</th>
+                                <th>Cluster 2</th>
+                                <th>Cluster 3</th>
+                                <th>Cluster 4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Duración</td>
+                                <td>count</td>
+                                <td>275.0</td>
+                                <td>188.0</td>
+                                <td>206.0</td>
+                                <td>161.0</td>
+                                <td>170.0</td>
+                            </tr>
+                            <tr>
+                                <td>Duración</td>
+                                <td>mean</td>
+                                <td>-0.195</td>
+                                <td>1.291</td>
+                                <td>-0.613</td>
+                                <td>0.053</td>
+                                <td>-0.419</td>
+                            </tr>
+                            <tr>
+                                <td>Duración</td>
+                                <td>std</td>
+                                <td>0.743</td>
+                                <td>0.799</td>
+                                <td>0.719</td>
+                                <td>0.759</td>
+                                <td>0.768</td>
+                            </tr>
+                            <tr>
+                                <td>Duración</td>
+                                <td>min</td>
+                                <td>-1.538</td>
+                                <td>-1.538</td>
+                                <td>-1.893</td>
+                                <td>-1.538</td>
+                                <td>-1.893</td>
+                            </tr>
+                            <tr>
+                                <td>Duración</td>
+                                <td>25%</td>
+                                <td>-0.735</td>
+                                <td>0.635</td>
+                                <td>-1.102</td>
+                                <td>-0.735</td>
+                                <td>-0.974</td>
+                            </tr>
+                            <tr>
+                                <td>Duración</td>
+                                <td>50%</td>
+                                <td>-0.119</td>
+                                <td>1.270</td>
+                                <td>-0.735</td>
+                                <td>0.149</td>
+                                <td>-0.735</td>
+                            </tr>
+                            <tr>
+                                <td>Duración</td>
+                                <td>75%</td>
+                                <td>0.400</td>
+                                <td>2.005</td>
+                                <td>-0.119</td>
+                                <td>0.400</td>
+                                <td>0.400</td>
+                            </tr>
+                            <tr>
+                                <td>Duración</td>
+                                <td>max</td>
+                                <td>1.831</td>
+                                <td>3.236</td>
+                                <td>2.005</td>
+                                <td>2.005</td>
+                                <td>1.651</td>
+                            </tr>
+
+                            <tr>
+                                <td>Monto</td>
+                                <td>count</td>
+                                <td>275.0</td>
+                                <td>188.0</td>
+                                <td>206.0</td>
+                                <td>161.0</td>
+                                <td>170.0</td>
+                            </tr>
+                            <tr>
+                                <td>Monto</td>
+                                <td>mean</td>
+                                <td>-0.499</td>
+                                <td>1.531</td>
+                                <td>-0.175</td>
+                                <td>-0.245</td>
+                                <td>-0.442</td>
+                            </tr>
+                            <tr>
+                                <td>Monto</td>
+                                <td>std</td>
+                                <td>0.764</td>
+                                <td>1.030</td>
+                                <td>0.747</td>
+                                <td>0.751</td>
+                                <td>0.704</td>
+                            </tr>
+                            <tr>
+                                <td>Monto</td>
+                                <td>min</td>
+                                <td>-1.748</td>
+                                <td>-0.948</td>
+                                <td>-1.143</td>
+                                <td>-1.092</td>
+                                <td>-1.227</td>
+                            </tr>
+                            <tr>
+                                <td>Monto</td>
+                                <td>25%</td>
+                                <td>-1.143</td>
+                                <td>0.604</td>
+                                <td>-0.804</td>
+                                <td>-0.852</td>
+                                <td>-0.845</td>
+                            </tr>
+                            <tr>
+                                <td>Monto</td>
+                                <td>50%</td>
+                                <td>-0.400</td>
+                                <td>1.318</td>
+                                <td>-0.235</td>
+                                <td>-0.235</td>
+                                <td>-0.288</td>
+                            </tr>
+                            <tr>
+                                <td>Monto</td>
+                                <td>75%</td>
+                                <td>0.100</td>
+                                <td>2.507</td>
+                                <td>0.476</td>
+                                <td>0.305</td>
+                                <td>0.476</td>
+                            </tr>
+                            <tr>
+                                <td>Monto</td>
+                                <td>max</td>
+                                <td>1.831</td>
+                                <td>3.236</td>
+                                <td>2.005</td>
+                                <td>2.005</td>
+                                <td>1.651</td>
+                            </tr>
+
+                            <tr>
+                                <td>Edad</td>
+                                <td>count</td>
+                                <td>275.0</td>
+                                <td>188.0</td>
+                                <td>206.0</td>
+                                <td>161.0</td>
+                                <td>170.0</td>
+                            </tr>
+                            <tr>
+                                <td>Edad</td>
+                                <td>mean</td>
+                                <td>-0.308</td>
+                                <td>0.161</td>
+                                <td>-0.242</td>
+                                <td>-0.070</td>
+                                <td>0.681</td>
+                            </tr>
+                            <tr>
+                                <td>Edad</td>
+                                <td>std</td>
+                                <td>0.729</td>
+                                <td>1.021</td>
+                                <td>0.787</td>
+                                <td>0.859</td>
+                                <td>1.314</td>
+                            </tr>
+                            <tr>
+                                <td>Edad</td>
+                                <td>min</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                            </tr>
+                            <tr>
+                                <td>Edad</td>
+                                <td>25%</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                            </tr>
+                            <tr>
+                                <td>Edad</td>
+                                <td>50%</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                                <td>1.027</td>
+                            </tr>
+                            <tr>
+                                <td>Edad</td>
+                                <td>75%</td>
+                                <td>-0.705</td>
+                                <td>1.027</td>
+                                <td>1.027</td>
+                                <td>1.027</td>
+                                <td>1.027</td>
+                            </tr>
+                            <tr>
+                                <td>Edad</td>
+                                <td>max</td>
+                                <td>1.027</td>
+                                <td>4.491</td>
+                                <td>2.759</td>
+                                <td>2.759</td>
+                                <td>4.491</td>
+                            </tr>
+
+                            <tr>
+                                <td>Nº de Créditos</td>
+                                <td>count</td>
+                                <td>275.0</td>
+                                <td>188.0</td>
+                                <td>206.0</td>
+                                <td>161.0</td>
+                                <td>170.0</td>
+                            </tr>
+                            <tr>
+                                <td>Nº de Créditos</td>
+                                <td>mean</td>
+                                <td>-0.308</td>
+                                <td>0.161</td>
+                                <td>-0.242</td>
+                                <td>-0.070</td>
+                                <td>0.681</td>
+                            </tr>
+                            <tr>
+                                <td>Nº de Créditos</td>
+                                <td>std</td>
+                                <td>0.729</td>
+                                <td>1.021</td>
+                                <td>0.787</td>
+                                <td>0.859</td>
+                                <td>1.314</td>
+                            </tr>
+                            <tr>
+                                <td>Nº de Créditos</td>
+                                <td>min</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                            </tr>
+                            <tr>
+                                <td>Nº de Créditos</td>
+                                <td>25%</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                            </tr>
+                            <tr>
+                                <td>Nº de Créditos</td>
+                                <td>50%</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                                <td>-0.705</td>
+                                <td>1.027</td>
+                            </tr>
+                            <tr>
+                                <td>Nº de Créditos</td>
+                                <td>75%</td>
+                                <td>-0.705</td>
+                                <td>1.027</td>
+                                <td>1.027</td>
+                                <td>1.027</td>
+                                <td>1.027</td>
+                            </tr>
+                            <tr>
+                                <td>Nº de Créditos</td>
+                                <td>max</td>
+                                <td>1.027</td>
+                                <td>4.491</td>
+                                <td>2.759</td>
+                                <td>2.759</td>
+                                <td>4.491</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <ul class="minimal-list">
+                    <li data-translate="customer-profiling-cluster-0"><strong>Cluster 0:</strong> Tiene clientes que tienden a tener más créditos, pero de montos y duraciones menores. Se sugiere una etiqueta como: <i>Clientes Cautelosos</i></li>
+                
+                    <li data-translate="customer-profiling-cluster-1"><strong>Cluster 1:</strong> Representa a los clientes que toman créditos más grandes y por períodos más largos. Se sugiere una etiqueta como: <i>Clientes Valiosos</i></li>
+                    
+                    <li data-translate="customer-profiling-cluster-2"><strong>Cluster 2:</strong> Representa a clientes con créditos de duración media y montos moderados, con características mixtas entre bajo y medio riesgo. Se sugiere una etiqueta como: <i>Clientes Nuevos Solicitantes</i></li>
+                    
+                    <li data-translate="customer-profiling-cluster-3"><strong>Cluster 3:</strong> Este cluster incluye a clientes jóvenes con créditos más cortos y montos moderados. Se sugiere una etiqueta como: <i>Clientes Moderados</i></li>
+                    
+                    <li data-translate="customer-profiling-cluster-4"><strong>Cluster 4:</strong> Similar al Cluster 0, pero con una ligera diferencia en la distribución de la edad. Se sugiere una etiqueta como: <i>Clientes en Crecimiento</i></li>
+                </ul>
+                
+
+
+                <h1 data-translate="customer-profiling-discussion-title">Discusión de los Resultados</h1>
+                <p data-translate="customer-profiling-discussion-description">Los resultados del clustering sugieren una segmentación clara de las características de los clientes, que permite enfocarse en sus distintas necesidades:</p>
+                <ul class="minimal-list">
+                    <li data-translate="customer-profiling-cluster-segmentation"><strong>Segmentación de clientes:</strong> Los clusters identificados pueden utilizarse para desarrollar estrategias de marketing personalizadas, ajustando las ofertas y productos financieros a las necesidades específicas de cada grupo.</li>
+                    <li data-translate="customer-profiling-risk-management"><strong>Gestión del riesgo:</strong> Al identificar perfiles de alto y bajo riesgo, las instituciones financieras pueden tomar decisiones más informadas sobre la concesión de créditos.</li>
+                    <li data-translate="customer-profiling-resource-optimization"><strong>Optimización de recursos:</strong> La segmentación también permite una asignación más eficiente de los recursos de la empresa, enfocando esfuerzos de retención y adquisición en los segmentos de clientes más rentables.</li>
+                </ul>
+
+
+
+                <h1 data-translate="customer-profiling-conclusion-title">Conclusión</h1>
+                <p data-translate="customer-profiling-conclusion-1">Este proyecto tuvo como objetivo utilizar técnicas de clusterización para obtener patrones, tendencias y segmentar clientes de la base de datos SouthGermanCredit. Tras el análisis de varios modelos el algoritmo K-Means con 5 clusters fue seleccionado como el más adecuado, ya que proporcionó la mejor combinación de separación entre clusters, como lo demuestran los valores del Silhouette Score.</p>
+                <p data-translate="customer-profiling-conclusion-2">Los resultados del clustering revelaron cinco segmentos de clientes con características distintas, por tanto, existen patrones claros en los datos que permitan mejorar la toma de decisiones. El proyecto también destacó la importancia del preprocesamiento de datos, (la normalización y la reducción de dimensionalidad). El uso de visualizaciones como gráficos de coordenadas paralelas y PCA - TSNE ayudó a validar y entender mejor la estructura de los clusters.</p>
+                <p data-translate="customer-profiling-conclusion-3">Para futuros trabajos, sería interesante explorar otras técnicas de clustering que puedan mejorar la identificación de subgrupos dentro de los clusters formados. Finalmente, la implementación de estos resultados en un modelo predictivo para la aprobación de créditos sería un buen paso para evaluar la segmentación realizada.</p>
+
+
+
+
+
+                
+            </div>
+        </section>
+    </main>
+    
+    
+
+
+
+    <a href="/#contact" class="floating-btn" data-translate="float-btn-contact">Contáctame</a>
+
+
+
+
+    <hr class="borde">
+
+    <footer id="footer">
+        <div class="container">
+            <p><small data-translate="footer_more_about">More about:</small></p>
+            <div class="img-footer">
+                <div class="img-footer-1">
+                    <a href="https://www.coursera.org/learner/guinansacaw" target="_blank"><img src="/images/redessociales/coursera.svg" alt="Coursera"></a>
+                </div>
+                <div class="img-footer-2">
+                    <img src="/images/redessociales/datacamp.svg" alt="">
+                </div>
+                <div class="img-footer-3">
+                    <a href="https://www.kaggle.com/guinansacaw" target="_blank"><img src="/images/redessociales/kaggle.svg" alt="Kaggle"></a>
+                </div>
+            </div>
+            <p><small>
+                <img src="/images/pajaro_rojo.png" alt=""> &copy; All rights reserved - William Guiñansaca <img src="/images/pajaro_rojo.png" alt="">
+            </small></p>
+        </div>
+    </footer>
+
+    <script src="/js/translations.js"></script>
+    <script src="/js/menu-header.js"></script>
+</body>
