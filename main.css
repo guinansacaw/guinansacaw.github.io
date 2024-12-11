@@ -229,6 +229,8 @@ header img {
 .img-profile img {
     max-width: 500px;
     height: auto;
+    filter: grayscale(85%);
+    padding-right: 20px;
 }
 
 #about .about-techniques {
@@ -597,7 +599,8 @@ header img {
     /*------------------------------------------------------*/
 
     #about .img-profile img {
-        display: none;
+        max-width: 100%;
+        padding-left: 20px;
     }
 
     #about .container {
