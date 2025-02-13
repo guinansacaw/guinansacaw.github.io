@@ -220,7 +220,7 @@ header img {
     margin: auto; /* Centra el contenido */
 }
 
-#content .container a {
+#content .container .simple-link a {
     color: #000000;
     text-decoration: underline;
 }
@@ -344,12 +344,146 @@ header img {
     text-decoration: none;
     border-radius: 50px;
     box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
-  }
+}
   
   .floating-btn:hover {
     background-color: rgb(216, 27, 27);
-  }
+}
 
+
+/*--------------------------------------------------------------*/
+
+.contenedor-botones-explorar-proyectos {
+    display: grid; /* Habilitamos Grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Define las columnas */
+    gap: 30px; /* Espacio entre los elementos */
+    /* max-width: 1200px; */
+}
+
+.boton-explorar-proyecto {
+    width: 550px; /* Ancho del botón */
+    margin: 20px 0; /* Márgenes entre botones */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    padding: 20px; /* Espacio interior */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+.boton-explorar-proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.boton-explorar-proyecto a {
+    display: block; /* El enlace ocupa todo el botón */
+    color: #333; /* Color de texto oscuro */
+    text-decoration: none; /* Sin subrayado */
+}
+  
+  
+.boton-explorar-proyecto h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: #222;
+    text-decoration: none; /* Sin subrayado */
+}
+
+.boton-explorar-proyecto p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    text-decoration: none; /* Sin subrayado */
+}
+
+/*--------------------------------------------------------------*/
+
+.seccion-imagen-desplazable {
+    position: relative;
+    width: 90%; /* Ajusta el ancho según tus necesidades */
+    margin: 0 auto;
+    overflow: hidden; /* Oculta la parte de la imagen que se desborda */
+}
+  
+.contenedor-imagen-desplazable {
+    width: 100%;
+    display: flex;
+    transition: transform 0.3s ease-in-out; /* Transición suave para el desplazamiento */
+}
+  
+
+  
+.flecha-izquierda, .flecha-derecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados */
+    opacity: 0.8; /* Opacidad */
+    transition: opacity 0.3s ease; /* Transición suave para la opacidad */
+}
+
+.flecha-izquierda:hover, .flecha-derecha:hover {
+    opacity: 1; /* Opacidad completa al pasar el ratón */
+}
+  
+.flecha-izquierda {
+    left: 0;
+    padding: 15px 20px; /* Aumenta el padding para hacerlas más grandes */
+    font-size: 20px; /* Aumenta el tamaño de la fuente si usas texto */
+    background: #f7f7f7; /* Ejemplo de degradado */
+    border: 1px solid #ddd;
+    color: #222; /* Asegúrate de que el texto sea visible */
+}
+  
+  .flecha-derecha {
+    right: 0;
+    padding: 15px 20px; /* Aumenta el padding para hacerlas más grandes */
+    font-size: 20px; /* Aumenta el tamaño de la fuente si usas texto */
+    background: #f7f7f7; /* Ejemplo de degradado */
+    border: 1px solid #ddd;
+    color: #222; /* Asegúrate de que el texto sea visible */
+}
+
+/*---------------------------------------------------------------*/
+
+.highlight {
+    font-weight: bold;
+}
+
+.impact {
+    background: #f9f6f6;
+    padding: 10px;
+    border-left: 5px solid #d1d1d1;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/*---------------------------------------------------------------*/
+
+.etiquetas-contenedor-herramientas {
+    display: flex; /* Para que las etiquetas se muestren en línea */
+    flex-wrap: wrap; /* Para que las etiquetas se ajusten a varias líneas si es necesario */
+    gap: 10px; /* Espacio entre etiquetas */
+    margin-top: 10px;
+  }
+  
+  .etiqueta-herramientas {
+    background-color: #f0f0f0; /* Color de fondo */
+    color: #333; /* Color de texto */
+    padding: 5px 12px; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de fuente */
+    white-space: nowrap; /* Evitar que el texto se ajuste a varias líneas */
+    /* border: 1px solid #ddd; */
+  }
 
 /*-------------------------------------------------------------*/
 
@@ -419,6 +553,38 @@ header img {
 
     .minimal-list {
         padding-left: 1rem; /* Reduce el padding */
+    }
+
+    .contenedor-botones-explorar-proyectos {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta el ancho mínimo para móviles */
+        gap: 20px; /* Reduce el espacio entre elementos */
+        padding: 10px; /* Reduce el padding */
+    }
+
+    .contenedor-imagen-desplazable img {
+        min-width: 100%; /* Evita que las imágenes se encojan */
+        max-width: 100%;
+        height: auto;
+        flex-shrink: 0;
+      }
+
+    .boton-explorar-proyecto {
+        padding: 15px; /* Reduce el padding en móviles */
+        max-width: 100%;
+        height: auto;
+    }
+
+    .boton-explorar-proyecto h3 {
+        font-size: 1.1rem; /* Reduce el tamaño de la fuente en móviles */
+    }
+
+    .boton-explorar-proyecto p {
+        font-size: 0.9rem; /* Reduce el tamaño de la fuente en móviles */
+    }
+
+    .flecha-izquierda, .flecha-derecha {
+        padding: 10px 15px; /* Ajusta el padding de las flechas */
+        font-size: 16px; /* Ajusta el tamaño de la fuente de las flechas */
     }
 
 }

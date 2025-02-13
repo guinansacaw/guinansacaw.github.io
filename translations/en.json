@@ -313,10 +313,29 @@
     "ecuadorSalaries-sectors-best-paid-title": "Sectors and Job Classes with the Best Salaries",
     "ecuadorSalaries-sectors-best-paid-description": "The 'Mining and Quarrying' and 'Foreign Affairs' sectors offer the highest salaries for men and women respectively. When analyzing job classes, activities related to defense, oil, and regulatory agencies also stood out as the best paid.",
     "ecuadorSalaries-employment-distribution-title": "Employment Distribution by Gender",
-    "ecuadorSalaries-employment-distribution-description": "Sectors like 'Agriculture' and 'Commerce' have a higher number of employees, both men and women, but proportionally, men tend to be overrepresented in sectors like 'Construction' and 'Mining and Quarrying.' Sectors like 'Services' show a more balanced distribution between both genders."
+    "ecuadorSalaries-employment-distribution-description": "Sectors like 'Agriculture' and 'Commerce' have a higher number of employees, both men and women, but proportionally, men tend to be overrepresented in sectors like 'Construction' and 'Mining and Quarrying.' Sectors like 'Services' show a more balanced distribution between both genders.",
 
 
+    "analisis-cesta-compra": "Sales Optimization and Commercial Strategy with BI and Machine Learning",
+    "analisis-cesta-compra-descripcion": "Description",
+    "analisis-cesta-compra-descripcion-contenido": "In this project, raw supermarket data was transformed into knowledge for decision-making, combining <span class='highlight'>SQL, Power BI, and Machine Learning</span> to extract key insights. From financial analysis to identifying purchasing patterns, <span class='highlight'>interactive dashboards</span> were generated, and <span class='highlight'>Market Basket Analysis</span> was applied to optimize sales strategies and maximize revenue.",
     
+    "analisis-cesta-compra-lista-1": "Power BI dashboards with key metrics, trends, and segmentations.",
+    "analisis-cesta-compra-lista-2": "Association Rules to discover products that are frequently purchased together and improve promotions.",
+    "analisis-cesta-compra-lista-3": "Financial and Customer KPIs to understand business performance and optimize the shopping experience.",
+    
+    "analisis-cesta-compra-impacto": "📊 <strong>The result?</strong> A comprehensive analytical solution that enables <span class='highlight'>data-driven decisions</span>, improves profitability, and anticipates consumer behavior. 🚀",
+    
+    "analisis-cesta-compra-documentacion": "Documentation",
+    "analisis-cesta-compra-documentacion-contenido": "You can find all documentation related to the code and SQL and Python scripts on my GitHub account. If you want a more detailed description of the case study and how the project was carried out, you can visit my Medium account.",
+    "analisis-cesta-compra-github": "The real work is in the code. Check it out on GitHub!",
+    "analisis-cesta-compra-medium": "If you want to know <i>why</i>, this is the story.",
+    "analisis-cesta-compra-hallazgos": "Key Findings",
+    "analisis-cesta-compra-hallazgos-fuente": "The last slide is a photo by <a href='https://unsplash.com/es/@annepreble?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>Anne Preble</a> on <a href='https://unsplash.com/es/fotos/red-tomato-lot-on-blue-baskets-SAPvKo12dQE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>Unsplash</a>"
+  
+
+
+
 
 
 

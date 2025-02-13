@@ -311,7 +311,26 @@
     "ecuadorSalaries-sectors-best-paid-title": "Sectores y Clases de Trabajo con Mejores Remuneraciones",
     "ecuadorSalaries-sectors-best-paid-description": "Los sectores de 'Explotación de Minas y Canteras' y 'Relaciones Exteriores' ofrecen las remuneraciones más altas para hombres y mujeres respectivamente. Al analizar las clases de trabajo, actividades relacionadas con defensa, petróleo, y regulación de organismos también destacaron como las mejores remuneradas.",
     "ecuadorSalaries-employment-distribution-title": "Distribución de Empleo por Género",
-    "ecuadorSalaries-employment-distribution-description": "Sectores como 'Agricultura' y 'Comercio' presentan una mayor cantidad de empleados tanto hombres como mujeres, aunque en términos proporcionales los hombres tienden a estar sobrerrepresentados en sectores como 'Construcción' y 'Minas y Canteras'. Sectores como 'Servicios' presentan una distribución más equilibrada entre ambos géneros."
+    "ecuadorSalaries-employment-distribution-description": "Sectores como 'Agricultura' y 'Comercio' presentan una mayor cantidad de empleados tanto hombres como mujeres, aunque en términos proporcionales los hombres tienden a estar sobrerrepresentados en sectores como 'Construcción' y 'Minas y Canteras'. Sectores como 'Servicios' presentan una distribución más equilibrada entre ambos géneros.",
+
+    "analisis-cesta-compra": "Optimización de Ventas y Estrategia Comercial con BI y Machine Learning",
+    "analisis-cesta-compra-descripcion": "Descripción",
+    "analisis-cesta-compra-descripcion-contenido": "En este proyecto, se transformó datos brutos de un supermercado en conocimiento para toma de decisiones, combinando <span class='highlight'>SQL, Power BI y Machine Learning</span> para extraer insights clave. Desde el análisis financiero hasta la identificación de patrones de compra, se generaron <span class='highlight'>dashboards interactivos</span> y se aplicó <span class='highlight'>Market Basket Analysis</span> para optimizar estrategias de venta y maximizar ingresos.",
+    
+    "analisis-cesta-compra-lista-1": "Dashboards en Power BI con métricas clave, tendencias y segmentaciones.",
+    "analisis-cesta-compra-lista-2": "Reglas de Asociación para descubrir productos que se compran juntos y mejorar promociones.",
+    "analisis-cesta-compra-lista-3": "KPIs Financieros y de Clientes para entender el rendimiento del negocio y optimizar la experiencia de compra.",
+    
+    "analisis-cesta-compra-impacto": "📊 <strong>¿El resultado?</strong> Una solución analítica integral que permite <span class='highlight'>decisiones basadas en datos</span>, mejora la rentabilidad y anticipa el comportamiento del consumidor. 🚀",
+    
+    "analisis-cesta-compra-documentacion": "Documentación",
+    "analisis-cesta-compra-documentacion-contenido": "Puedes encontrar toda la documentación relacionada al código y los scripts de SQL y Python en mi cuenta de GitHub. Si deseas una descripción más detallada del caso de estudio y cómo se llevó a cabo el proyecto, puedes visitar mi cuenta de Medium.",
+    "analisis-cesta-compra-github": "El verdadero trabajo está en el código. Revísalo en GitHub!",
+    "analisis-cesta-compra-medium": "Si quieres saber el <i>por qué</i>, esta es la historia.",
+    "analisis-cesta-compra-hallazgos": "Hallazgos clave",
+    "analisis-cesta-compra-hallazgos-fuente": "El último slide es una foto de <a href='https://unsplash.com/es/@annepreble?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>Anne Preble</a> en <a href='https://unsplash.com/es/fotos/red-tomato-lot-on-blue-baskets-SAPvKo12dQE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>Unsplash</a>"
+  
+    
 
 
 
