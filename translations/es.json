@@ -231,17 +231,23 @@
     "customer-profiling-conclusion-3": "Para futuros trabajos, sería interesante explorar otras técnicas de clustering que puedan mejorar la identificación de subgrupos dentro de los clusters formados. Finalmente, la implementación de estos resultados en un modelo predictivo para la aprobación de créditos sería un buen paso para evaluar la segmentación realizada.",
   
 
-    "ecuadorSalaries-photo-credit": "Foto de <a href=\"https://unsplash.com/es/@dwiadro?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Daniel Wiadro</a> en <a href=\"https://unsplash.com/es/fotos/hombre-soldando-un-metal-negro-GAEvM4qvlBk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Unsplash</a>",
+    "ecuadorSalaries-photo-credit": "El último slide es una foto <a href=\"https://unsplash.com/es/@dwiadro?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Daniel Wiadro</a> en <a href=\"https://unsplash.com/es/fotos/hombre-soldando-un-metal-negro-GAEvM4qvlBk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Unsplash</a>",
     "ecuadorSalaries-title": "Análisis de Datos de Empleo y Salarios en Ecuador",
-    "ecuadorSalaries-description": "Este proyecto de análisis de datos se enfoca en comprender la distribución del empleo y los salarios en Ecuador. Implica múltiples tareas realizadas utilizando R, incluyendo limpieza de datos, análisis estadístico, visualización y el desarrollo de un tablero de control interactivo. Las tareas incluidas son:",
-    "ecuadorSalaries-data-cleaning": "<strong>Limpieza de datos:</strong> Se eliminaron los valores nulos y se trataron los valores atípicos en variables como salarios y datos de empleo.",
-    "ecuadorSalaries-salary-analysis": "<strong>Análisis Salarial:</strong> Análisis de la distribución del empleo por sector y género.",
-    "ecuadorSalaries-visualizations": "<strong>Visualizaciones:</strong> Se crearon múltiples gráficos para las clases de trabajo mejor pagadas por género, distribución del empleo, etc.",
-    "ecuadorSalaries-dashboard-development": "<strong>Desarrollo de un Dashboard interactivo:</strong> Se filtraron visualizaciones y estadísticas basadas en datos con o sin valores atípicos.",
+
+
+    "ecuadorSalaries-description": "En este proyecto, se analizó la distribución del empleo y los salarios en Ecuador utilizando <strong>R</strong> para transformar datos brutos en información clave para la toma de decisiones. A través de técnicas de <strong>limpieza de datos, visualización estadística y dashboards interactivos</strong>, se identificaron patrones salariales y desigualdades por sector y género.",
+    "ecuadorSalaries-data-cleaning": "<strong>Dashboards interactivos</strong> con métricas clave y filtros dinámicos.",
+    "ecuadorSalaries-salary-analysis": "<strong>Análisis de salarios</strong> para identificar sectores mejor remunerados y brechas salariales.",
+    "ecuadorSalaries-visualizations": "<strong>Impacto de outliers</strong>, evaluando su efecto en la interpretación de los datos.",
+    "ecuadorSalaries-dashboard-development": "<strong>Distribución del empleo por sector y género</strong>, revelando tendencias de equidad e inequidad laboral.",
+    "ecuadorSalaries-impacto": "📊 <strong>¿El resultado?</strong> Un análisis profundo de la estructura salarial en Ecuador, proporcionando insights para la formulación del dashboard. 🚀",
+
+
+
     "ecuadorSalaries-about-dataset": "Acerca del conjunto de datos",
     "ecuadorSalaries-about-dataset-description": "Los datos provienen del <a href=\"http://www.ecuadorencifras.gob.ec/directoriodeempresas/\" target=\"_blank\" class=\"simple-link\">Registro Estadístico de Empresas (REEM)</a> e incluyen datos de diversas fuentes, como el SRI, IESS, Superintendencia de Compañías, Ministerio de Educación e INEC. Bajo licencia adecuada para el uso público. La fecha de acceso al conjunto de datos fue el 10 de julio de 2024. Para más información, puedes consultar la página web del Instituto Nacional de Estadística y Censos (INEC) de Ecuador en el siguiente <a href=\"https://www.ecuadorencifras.gob.ec/directoriodeempresas/\" target=\"_blank\" class=\"simple-link\">enlace.</a>",
-    "ecuadorSalaries-about-code": "Sobre el código completo y documentación",
-    "ecuadorSalaries-about-code-description": "Si quieres revisar el código completo del proyecto, incluyendo el preprocesamiento de datos y la construcción del dashboard, puedes visitar mi repositorio en <a href=\"https://github.com/guinansacaw/analisisRepositoriosEcuador/blob/main/proyecto2.md\" class=\"simple-link\" target=\"_blank\">GitHub.</a> El conjunto de datos no está incluido directamente en el repositorio. Para obtenerlo, visita la fuente de los datos antes mencionada.",
+    "ecuadorSalaries-about-code": "Documentación",
+    "ecuadorSalaries-about-code-description": "Si quieres revisar el código completo del proyecto, incluyendo el preprocesamiento de datos y la construcción del dashboard, puedes visitar mi repositorio en GitHub. El conjunto de datos no está incluido directamente en el repositorio. Para obtenerlo, visita la fuente de los datos en <a href=\"http://www.ecuadorencifras.gob.ec/directoriodeempresas/\" target=\"_blank\" class=\"simple-link\">Registro Estadístico de Empresas (REEM)</a> Si deseas una descripción más detallada del caso de estudio y cómo se llevó a cabo el proyecto, puedes visitar mi cuenta de Medium.",
     "ecuadorSalaries-summary": "Resumen",
     "ecuadorSalaries-summary-description": "Este proyecto analiza las remuneraciones y distribución de empleo en Ecuador desde una perspectiva de sector, clase de trabajo y género. Se utilizan técnicas de limpieza de datos, detección de outliers y visualización para identificar patrones y desigualdades. Los resultados muestran una brecha salarial significativa en la mayoría de los sectores. Sectores como 'Explotación de Minas y Canteras' y 'Relaciones Exteriores' destacan por sus remuneraciones más altas, mientras que sectores como 'Servicios' presentan una mayor equidad de género en el empleo. Al explorar las clases de trabajo, actividades relacionadas con defensa, petróleo y regulación se identificaron como las mejores remuneradas.",
     "ecuadorSalaries-development": "Desarrollo",
@@ -303,7 +309,7 @@
     "ecuadorSalaries-job-sector-comparison": "Comparación de Empleo por Sector (Hombres vs Mujeres)",
     "ecuadorSalaries-job-sector-comparison-caption": "Figura 6: Comparación de Empleo por Sector (Hombres vs Mujeres)",
     "ecuadorSalaries-share": "Compartir",
-    "ecuadorSalaries-conclusions-title": "Conclusiones",
+    "ecuadorSalaries-conclusions-title": "Hallazgos Clave",
     "ecuadorSalaries-outliers-impact-title": "Impacto de los Outliers",
     "ecuadorSalaries-outliers-impact-description": "Los outliers tienen un efecto significativo en las métricas clave, como remuneraciones promedio y distribución de empleados por género y sector. Al incluir outliers, las cifras presentan una distorsión que dificulta interpretar las tendencias reales. Al eliminarlos, los datos muestran una visión más precisa y manejable, permitiendo identificar patrones y desbalances de género o sector de manera más confiable.",
     "ecuadorSalaries-gender-salary-gap-title": "Brecha Salarial por Género",

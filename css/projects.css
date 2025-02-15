@@ -250,7 +250,7 @@ header img {
 
 .tableauPlaceholder {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1366px;
     margin: 0 auto;
     overflow: auto; /* Agrega scroll si es necesario */
 }
