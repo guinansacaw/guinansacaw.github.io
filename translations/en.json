@@ -1,47 +1,94 @@
 {
-    "title": "William Guiñansaca - Data Analyst Portafolio",
+    "title": "William Guiñansaca | API Integrations, Webhooks & Backend Automation",
     "logo": "William Guiñansaca",
     "menu_home": "Home",
     "menu_about": "About",
     "menu_portfolio": "Portfolio",
     "menu_contact": "Contact",
-    "home_description": "Data Analytics Portfolio &rarr;",
-    "about_title": "About me",
-    "about_intro": "I have developed skills in coding, storytelling, and data viz. Over the past year, I have been involved in projects and learning data analysis using software such as Excel, Oracle PL/SQL, statistical tools like RStudio/Python, and business intelligence tools such as Power BI and Tableau.",
-    "about_skills_title": "Techniques & Skills:",
-    "about_skills1": "Data Cleaning and Preparation",
-    "about_skills2": "Exploratory Data Analysis and Visualization",
-    "about_skills3": "Predictive Modeling and Machine Learning",
-    "about_skills4": "Business Intelligence and Report Generation",
+    "home_description": "View Projects &rarr;",
+    "home_subtitle": "API Integration | Webhooks | Backend Automation | WhatsApp Automation",
+
+
+
+
+    "home_kicker": "Backend automation for real business workflows",
+    "home_value": "Automate operations. Connect systems. Eliminate manual work.",
+    "home_subsupport": "I build backend systems that connect ERPs, APIs, webhooks, and WhatsApp workflows into reliable automated processes.",
+    "home_cta_primary": "See featured project",
+    "home_cta_secondary": "Contact",
+    "portfolio_intro": "Selected work focused on backend automation, API integrations, and operational workflows.",
+    "portfolio_featured_badge": "Featured project",
+
+
+
+    "about_title": "About",
+    "about_intro": "I design and build backend automation systems that replace manual operations and connect business-critical workflows.",
+    "about_intro_2": "My work focuses on integrating APIs, handling event-driven flows, and orchestrating backend logic that moves data reliably across systems.",
+    "about_intro_3": "The goal is simple: eliminate repetitive work, reduce operational errors, and create systems that run consistently without manual intervention.",
+    "about_skills_title": "Core capabilities",
+    "about_skills1": "API Integrations",
+    "about_skills2": "Webhook Automation",
+    "about_skills3": "Backend Workflows",
+    "about_skills4": "SQL & Data Pipelines",
+
+
+
+
+    "tech_nodejs": "Node.js",
+    "tech_nodejs_desc": "Backend Logic",
+    "tech_rest_apis": "REST APIs",
+    "tech_rest_apis_desc": "Integrations",
+    "tech_webhooks": "Webhooks",
+    "tech_webhooks_desc": "Event Flows",
+    "tech_azure_functions": "Azure Functions",
+    "tech_azure_functions_desc": "Serverless Automation",
+    "tech_sql": "SQL",
+    "tech_sql_desc": "Data & Queries",
+    "tech_whatsapp_api": "WhatsApp API",
+    "tech_whatsapp_api_desc": "Messaging Automation",
+    "tech_stack_kicker": "Core stack",
+    "tech_stack_title": "Technologies I use to build backend automation systems",
+    "tech_stack_description": "APIs, event flows, serverless functions, databases, and messaging tools combined into reliable operational workflows.",
+    "tech_group_backend": "Backend & integration",
+    "tech_group_automation": "Automation & data",
+
+
+
+
+
 
     "portfolio_title": "Portfolio",
-    "portfolio_project1_title": "Customer Segmentation",
-    "portfolio_project1_desc": "Python, Machine Learning, Clustering, KMeans.",
+    "portfolio_project6_title": "LoopyApp - WhatsApp Automation & Backend Integration",
+    "portfolio_project6_desc": "Node.js, REST APIs, Webhooks, WhatsApp API, Automation",
+    "portfolio_project1_title": "End-to-End BI Pipeline with ETL and OLAP",
+    "portfolio_project1_desc": "PostgreSQL, Pentaho, ETL, OLAP, BI Architecture",
+    "portfolio_project5_title": "Sales Optimization with BI and Machine Learning",
+    "portfolio_project5_desc": "SQL, Power BI, Python, Commercial Analytics",
+    "portfolio_project4_title": "Customer Segmentation",
+    "portfolio_project4_desc": "Python, Clustering, Machine Learning, Customer Analysis",
+    "portfolio_project2_title": "Salaries by Employment Type in Ecuador",
+    "portfolio_project2_desc": "RStudio, EDA, Dashboard, Shiny",
+    "portfolio_project3_title": "Bellabeat - Google Analytics Certification",
+    "portfolio_project3_desc": "RStudio, Tableau",
+    "portfolio_project7_title": "Cyclistic - Google Analytics Certification",
+    "portfolio_project7_desc": "RStudio, Tableau",
     "portfolio_project1_link": "More details &#8594;",
-    "portfolio_project2_title": "Bellabeat - Google Analytics Certification",
-    "portfolio_project2_desc": "Rstudio, Tableau",
     "portfolio_project2_link": "More details &#8594;",
-    "portfolio_project3_title": "Cyclistic - Google Analytics Certification",
-    "portfolio_project3_desc": "Rstudio, Tableau",
     "portfolio_project3_link": "More details &#8594;",
-    "portfolio_project4_title": "Salaries by Employment Type in Ecuador",
-    "portfolio_project4_desc": "Rstudio, EDA, Dashboard, Shiny.",
     "portfolio_project4_link": "More details &#8594;",
-    "portfolio_project5_title": "Market Basket Analysis",
+    "portfolio_project5_link": "More details &#8594;",
+    "portfolio_project6_link": "More details &#8594;",
+    "portfolio_project7_link": "More details &#8594;",
     "contact_title": "Get In Touch",
     "contact_name_label": "Name",
     "contact_email_label": "Email",
     "contact_subject_label": "Subject",
     "contact_message_label": "Message",
     "contact_send_button": "Send Email",
-    "contact_social_intro": "Transforming data into decisions: from supporting daily business strategies to driving meaningful global changes. If you have a project or inquiry, feel free to contact me or follow me on my social media.",
+    "contact_social_intro": "I work on backend automation, API integrations, webhooks, and WhatsApp-based workflows. If you need to connect systems, automate manual tasks, or build a reliable backend flow, feel free to contact me.",
     "footer_more_about": "More about:",
     "footer_rights": "&copy; All rights reserved - William Guiñansaca",
-
-
-    "float-btn-contact" : "Get in Touch",
-
-
+    "float-btn-contact": "&#x1F850; Back to Portfolio",
     "bellabeat-title-page": "Bellabeat - Google Data Analytics Certification",
     "bellabeat-title-project": "Bellabeat Case Study",
     "bellabeat-intro": "The final capstone project for obtaining the Google Data Analysis Certification, based on the 6-step framework from Google for data analytics: Ask, Prepare, Process, Analyze, Share & Act. The project involved tasks such as:",
@@ -71,7 +118,7 @@
     "bellabeat-templates-info": "The templates used to create the presentation and infographic can be downloaded from",
     "bellabeat-templates-link": "here",
     "bellabeat-summary": "Summary",
-    "bellabeat-summary-description": "The analysis of Bellabeat user data revealed that most users lead a sedentary lifestyle, complemented by occasional activities to care for their health. However, these activities are not daily habits, resulting in physical activity levels just slightly above those of a sedentary person. Additionally, the analysis showed that both lack and excess of sleep negatively impact physical activity, highlighting the importance of sleeping between 5 and 8 hours daily to improve overall health. <br> The study identified that the absence of key data, such as heart rate and weight, limits deeper analysis of Bellabeat products. As a result, it is recommended to encourage the use of the app and its features to collect more comprehensive information. <br> To enhance user experience and promote healthy habits, strategies such as weekly contests, rewards for achieving goals, personalized recommendations for exercise, sleep, and nutrition, and educational newsletters are proposed. These initiatives aim to strengthen the connection of users with Bellabeat and support achieving health goals.",  
+    "bellabeat-summary-description": "The analysis of Bellabeat user data revealed that most users lead a sedentary lifestyle, complemented by occasional activities to care for their health. However, these activities are not daily habits, resulting in physical activity levels just slightly above those of a sedentary person. Additionally, the analysis showed that both lack and excess of sleep negatively impact physical activity, highlighting the importance of sleeping between 5 and 8 hours daily to improve overall health. <br> The study identified that the absence of key data, such as heart rate and weight, limits deeper analysis of Bellabeat products. As a result, it is recommended to encourage the use of the app and its features to collect more comprehensive information. <br> To enhance user experience and promote healthy habits, strategies such as weekly contests, rewards for achieving goals, personalized recommendations for exercise, sleep, and nutrition, and educational newsletters are proposed. These initiatives aim to strengthen the connection of users with Bellabeat and support achieving health goals.",
     "bellabeat-development": "Development",
     "bellabeat-development-description": "Bellabeat is a high-tech manufacturer of health-focused products for women. The aim is to unlock new growth opportunities for the company by focusing on one of Bellabeat’s products and analyzing smart device data to gain insights into how consumers are using their devices.",
     "bellabeat-key-question": "Key Question (Ask)",
@@ -110,7 +157,6 @@
     "bellabeat-recommendation-6": "Recommend activities to eat healthily.",
     "bellabeat-recommendation-7": "Newsletter providing information on how much to sleep, how much to exercise, and other tips.",
     "bellabeat-recommendation-8": "Simplify the information entry process for users.",
-  
     "cyclistic-title-page": "Cyclistic - Google Data Analytics Certification",
     "cyclistic-title-project": "Cyclistic Case Study",
     "cyclistic-intro": "The final capstone project for obtaining the Google Data Analysis Certification, based on the 6-step framework from Google for data analytics: Ask, Prepare, Process, Analyze, Share & Act. The project involved tasks such as:",
@@ -158,7 +204,7 @@
     "cyclistic-analyse-item3-title": "Most common month for trips",
     "cyclistic-analyse-item3-desc": "The month with the highest frequency of trips is July, which could indicate an increase in usage due to warm weather or recreational activities.",
     "cyclistic-analyse-item4-title": "Trip duration by day of the week",
-    "cyclistic-analyse-item4-desc": "Casual users record longer trips on Sundays (2031.26 seconds, about 34 minutes) and Saturdays (1958.27 seconds, about 33 minutes). Members have more uniform durations, though trips are longer on Sundays and Saturdays (around 14 minutes).",  
+    "cyclistic-analyse-item4-desc": "Casual users record longer trips on Sundays (2031.26 seconds, about 34 minutes) and Saturdays (1958.27 seconds, about 33 minutes). Members have more uniform durations, though trips are longer on Sundays and Saturdays (around 14 minutes).",
     "cyclistic-share": "Share (Share)",
     "cyclistic-act": "Act (Act)",
     "cyclistic-act-description-1": "The mode for casual and member users, and the average trip duration during the entire week, demonstrate a marked difference between these two types of users. Casual members use bikes mainly on weekends, while members use bikes for a constant time during all their trips in the workweek. Additionally, while casual users spend more time on their trips, members try to save time with shorter trips averaging 12 minutes.",
@@ -233,10 +279,8 @@
     "customer-profiling-conclusion-1": "The objective of this project was to use clustering techniques to obtain patterns, trends, and segment clients from the SouthGermanCredit database. After analyzing several models, the K-Means algorithm with 5 clusters was selected as the most suitable, as it provided the best combination of separation between clusters, as demonstrated by the Silhouette Score values.",
     "customer-profiling-conclusion-2": "The clustering results revealed five customer segments with distinct characteristics, so there are clear patterns in the data that can improve decision-making. The project also highlighted the importance of data preprocessing, (normalization and dimensionality reduction). The use of visualizations such as parallel coordinate plots and PCA - TSNE helped to validate and better understand the cluster structure.",
     "customer-profiling-conclusion-3": "For future work, it would be interesting to explore other clustering techniques that could improve the identification of subgroups within the formed clusters. Finally, implementing these results in a predictive model for credit approval would be a good step to evaluate the segmentation performed.",
-    
     "ecuadorSalaries-photo-credit": "The last slide is a photo by <a href=\"https://unsplash.com/es/@dwiadro?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Daniel Wiadro</a> on <a href=\"https://unsplash.com/es/fotos/hombre-soldando-un-metal-negro-GAEvM4qvlBk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Unsplash</a>",
     "ecuadorSalaries-title": "Data Analysis of Employment and Salaries in Ecuador",
-
     "ecuadorSalaries-description": "In this project, the distribution of employment and salaries in Ecuador was analyzed using <strong>R</strong> to transform raw data into key information for decision-making. Through <strong>data cleaning, statistical visualization, and interactive dashboards</strong>, salary patterns and inequalities by sector and gender were identified.",
     "ecuadorSalaries-data-cleaning": "<strong>Interactive dashboards</strong> with key metrics and dynamic filters.",
     "ecuadorSalaries-salary-analysis": "<strong>Salary analysis</strong> to identify the highest-paying sectors and wage gaps.",
@@ -317,44 +361,126 @@
     "ecuadorSalaries-sectors-best-paid-description": "The 'Mining and Quarrying' and 'Foreign Affairs' sectors offer the highest salaries for men and women respectively. When analyzing job classes, activities related to defense, oil, and regulatory agencies also stood out as the best paid.",
     "ecuadorSalaries-employment-distribution-title": "Employment Distribution by Gender",
     "ecuadorSalaries-employment-distribution-description": "Sectors like 'Agriculture' and 'Commerce' have a higher number of employees, both men and women, but proportionally, men tend to be overrepresented in sectors like 'Construction' and 'Mining and Quarrying.' Sectors like 'Services' show a more balanced distribution between both genders.",
-
-
     "analisis-cesta-compra": "Sales Optimization and Commercial Strategy with BI and Machine Learning",
     "analisis-cesta-compra-descripcion": "Description",
     "analisis-cesta-compra-descripcion-contenido": "In this project, raw supermarket data was transformed into knowledge for decision-making, combining <span class='highlight'>SQL, Power BI, and Machine Learning</span> to extract key insights. From financial analysis to identifying purchasing patterns, <span class='highlight'>interactive dashboards</span> were generated, and <span class='highlight'>Market Basket Analysis</span> was applied to optimize sales strategies and maximize revenue.",
-    
     "analisis-cesta-compra-lista-1": "Power BI dashboards with key metrics, trends, and segmentations.",
     "analisis-cesta-compra-lista-2": "Association Rules to discover products that are frequently purchased together and improve promotions.",
     "analisis-cesta-compra-lista-3": "Financial and Customer KPIs to understand business performance and optimize the shopping experience.",
-    
     "analisis-cesta-compra-impacto": "📊 <strong>The result?</strong> A comprehensive analytical solution that enables <span class='highlight'>data-driven decisions</span>, improves profitability, and anticipates consumer behavior. 🚀",
-    
     "analisis-cesta-compra-documentacion": "Documentation",
     "analisis-cesta-compra-documentacion-contenido": "You can find all documentation related to the code and SQL and Python scripts on my GitHub account. If you want a more detailed description of the case study and how the project was carried out, you can visit my Medium account.",
     "analisis-cesta-compra-github": "The real work is in the code. Check it out on GitHub!",
     "analisis-cesta-compra-medium": "If you want to know <i>why</i>, this is the story.",
     "analisis-cesta-compra-hallazgos": "Key Findings",
-    "analisis-cesta-compra-hallazgos-fuente": "The last slide is a photo by <a href='https://unsplash.com/es/@annepreble?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>Anne Preble</a> on <a href='https://unsplash.com/es/fotos/red-tomato-lot-on-blue-baskets-SAPvKo12dQE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>Unsplash</a>"
-  
+    "analisis-cesta-compra-hallazgos-fuente": "The last slide is a photo by <a href='https://unsplash.com/es/@annepreble?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>Anne Preble</a> on <a href='https://unsplash.com/es/fotos/red-tomato-lot-on-blue-baskets-SAPvKo12dQE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>Unsplash</a>",
+    "loopyapp-title-page": "LoopyApp - ERP, WhatsApp and Backend Automation",
+    "loopyapp-title-project": "LoopyApp - ERP, WhatsApp and Backend Automation",
+    "loopyapp-intro-short": "LoopyApp connects ERP events with WhatsApp surveys to automate customer feedback after sales and service interactions.",
+    "loopyapp-impact-short": "<strong>Main value:</strong> it automates the full path from ERP event to WhatsApp survey, response capture, and structured storage for analysis.",
+    "loopyapp-summary-title": "Project summary",
+    "loopyapp-summary-text": "The system takes real business events such as sales or invoices, transforms them into a standard order format, validates business rules, schedules message delivery, and stores responses with full traceability.",
+    "loopyapp-overview-cards-title": "Overview",
+    "loopyapp-card-problem-title": "Problem",
+    "loopyapp-card-problem-text": "Customer experience was invisible. Surveys were manual, inconsistent, or simply not done. ERP data existed, but it was not connected to real customer feedback.",
+    "loopyapp-card-solution-title": "Solution",
+    "loopyapp-card-solution-text": "LoopyApp connects ERP events with automated WhatsApp surveys. Each transaction triggers a controlled feedback flow, applying business rules and capturing responses automatically.",
+    "loopyapp-card-result-title": "Outcome",
+     "loopyapp-card-result-text": "Customer feedback becomes structured, real-time, and actionable. Companies can analyze experience by client, branch, or product without manual effort.",
+    "loopyapp-flow-title": "How it works",
+    "loopyapp-flow-card-1-title": "1. Capture ERP events",
+    "loopyapp-flow-card-1-text": "Sales data is read from the ERP, originally through SQL views and later through API-based collectors using incremental control.",
+    "loopyapp-flow-card-2-title": "2. Standardize",
+    "loopyapp-flow-card-2-text": "Documents are grouped by invoice and converted into a standard order payload with customer, products, totals, and metadata.",
+    "loopyapp-flow-card-3-title": "3. Apply business logic",
+    "loopyapp-flow-card-3-text": "The core validates authentication, saves the order, checks campaign rules, validates the phone number, and controls cooldowns and minimum amount.",
+    "loopyapp-flow-card-4-title": "4. Send automated surveys",
+    "loopyapp-flow-card-4-text": "If the order passes validation, it is queued and later dispatched as a WhatsApp survey message.",
+    "loopyapp-flow-card-5-title": "5. Webhook + Storage",
+    "loopyapp-flow-card-5-text": "Customer responses, NPS scores, comments, and delivery states are captured through webhooks and stored in Azure SQL.",
+    "loopyapp-architecture-title": "Architecture at a glance",
+    "loopyapp-architecture-1": "<strong>ERP / External system:</strong> source of sales or transactional data.",
+    "loopyapp-architecture-2": "<strong>Collector:</strong> incremental integration layer that reads APIs and builds a standard sync payload.",
+    "loopyapp-architecture-3": "<strong>Core API:</strong> receives orders at /api/sync and applies processing logic.",
+    "loopyapp-architecture-4": "<strong>Dispatcher:</strong> sends pending WhatsApp messages.",
+    "loopyapp-architecture-5": "<strong>Webhook handler:</strong> receives delivery events and customer responses.",
+    "loopyapp-architecture-6": "<strong>Azure SQL:</strong> stores orders, messages, responses, and control tables.",
+    "loopyapp-decisions-title": "Key engineering decisions",
+    "loopyapp-decision-card-1-title": "Multi-tenant",
+    "loopyapp-decision-card-1-text": "Processing is isolated by company and branch, preventing data mixing across clients and ensuring reliable automation.",
+    "loopyapp-decision-card-2-title": "Watermark",
+    "loopyapp-decision-card-2-text": "Only new records are processed, avoiding unnecessary reprocessing and improving efficiency.",
+    "loopyapp-decision-card-3-title": "Idempotency",
+    "loopyapp-decision-card-3-text": "Each ERP document is validated before processing to prevent duplicates and ensure data consistency.",
+    "loopyapp-decision-card-4-title": "Leases",
+    "loopyapp-decision-card-4-text": "Tenant-level locking prevents concurrent processes from conflicting, ensuring stable execution.",
+    "loopyapp-decision-card-5-title": "Controlled errors",
+    "loopyapp-decision-card-5-text": "Retries, circuit breaker behavior, and controlled failures reduce integration risk and improve system resilience.",
+    "loopyapp-decision-card-6-title": "Audit runs",
+    "loopyapp-decision-card-6-text": "Executions are logged with status, counts, and timestamps, enabling monitoring and traceability.",
+    "loopyapp-collector-title": "Collector",
+    "loopyapp-collector-text-short": "The collector made the system more flexible by replacing direct ERP database dependency with API-based integration. It fetches new data incrementally, maps it into the standard sync format, and sends it to the core.",
+    "loopyapp-before-after-title": "Before / After",
+    "loopyapp-before-title": "Before",
+    "loopyapp-before-1": "Direct ERP database dependency.",
+    "loopyapp-before-2": "Manual or missing surveys.",
+    "loopyapp-before-3": "No real-time customer experience measurement.",
+    "loopyapp-before-4": "Harder to integrate with large clients.",
+    "loopyapp-after-title": "After",
+    "loopyapp-after-1": "API-based integration through collector adapters.",
+    "loopyapp-after-2": "Automated survey dispatch through WhatsApp.",
+    "loopyapp-after-3": "Structured response capture with traceability.",
+    "loopyapp-after-4": "Multi-tenant execution with duplicate protection.",
+    "loopyapp-limitations-title": "Current limitations",
+    "loopyapp-limitations-1": "Core security is still basic and relies on API key authentication.",
+    "loopyapp-limitations-2": "There is no administration UI for configuration management.",
+    "loopyapp-limitations-3": "The system depends on ERP data quality.",
+    "loopyapp-limitations-4": "Some mappings remain manual and ERP-specific.",
+    "loopyapp-conclusion-title": "Conclusion",
+    "loopyapp-conclusion-short": "This project shows how backend systems can turn operational data into real business insight. From ERP integration to automated messaging and analytics, the goal is simple: remove manual processes and make customer experience measurable.",
+    "loopyapp-code-title": "Technical implementation",
+    "loopyapp-code-intro": "Below are simplified examples of how the system processes data and automates workflows.",
+    "loopyapp-code-card-1-title": "Sync endpoint",
+    "loopyapp-code-card-1-text": "Receives standardized ERP orders, prevents duplicates, stores the order, and queues the survey flow.",
+    "loopyapp-code-card-2-title": "Business rules",
+    "loopyapp-code-card-2-text": "Validates whether an order meets conditions before scheduling message delivery.",
+    "loopyapp-code-card-3-title": "Webhook processing",
+    "loopyapp-code-card-3-text": "Captures message status and customer survey responses from WhatsApp.",
+    "cta-title": "Need something similar?",
+    "cta-text": "I build integrations that connect ERPs, APIs, webhooks, and WhatsApp flows into reliable backend workflows.",
+    "loopyapp-cta-button": "Contact me",
+    "cta-support": "If you need to connect systems, automate a manual process, or move data reliably between tools, send me the details.",
+    "loopyapp-flow-card-6-title": "6. Data modeling and analytics",
+    "loopyapp-flow-card-6-text": "Reporting-oriented SQL views were created to expose clean analytical tables. Power BI connects to these views to build the semantic model using a snowflake schema, including bridge tables where needed.",
+    "loopyapp-architecture-7": "<strong>Data modeling and analytics:</strong> SQL views expose structured data for reporting, enabling Power BI to connect and build the semantic model.",
+    "loopyapp-before-5": "No structured analytical layer for reporting.",
+    "loopyapp-after-5": "Dedicated reporting layer using SQL views and a semantic model in Power BI.",
+    "loopyapp-kicker": "Backend automation case: from ERP events to automated customer feedback",
+    "loopyapp-value": "LoopyApp connects ERP data, messaging flows, and analytics into a single automated system that captures real customer experience in real time.",
+    "loopyapp-impact-strong": "<strong>Result:</strong> every sale becomes a measurable feedback event. Companies can track customer experience in real time, identify issues faster, and eliminate manual survey processes.",
+    "loopyapp-case-title": "Business case",
+    "loopyapp-cta-title": "Need to automate something similar?",
+    "loopyapp-cta-text": "I build backend systems that connect ERPs, APIs, webhooks, and messaging flows into automated, reliable processes.",
+    "loopyapp-cta-support": "Tell me what you need to connect, automate, or simplify.",
+    "loopyapp-flow-section-title": "System flow",
+    "loopyapp-flow-section-subtitle": "How the system processes data from ERP events to structured feedback.",
 
 
 
 
 
-
-
-
-
-    
-  
-  
-  
-
-
-
-
-
-  
-
-
+    "pipeline-bi-title-page": "Complete Business Intelligence Pipeline",
+    "pipeline-bi-title-project": "Complete BI System Implementation with ETL and OLAP",
+    "pipeline-bi-description": "In this project, a complete Business Intelligence pipeline was built using PostgreSQL, Pentaho Data Integration, Mondrian, and Saiku to transform operational data into structured analytical models and interactive OLAP exploration.",
+    "pipeline-bi-feature-1": "<strong>ETL pipelines</strong> to extract, transform, and load data into the analytical model.",
+    "pipeline-bi-feature-2": "<strong>Dimensional modeling</strong> to organize information for multidimensional analysis.",
+    "pipeline-bi-feature-3": "<strong>OLAP exploration</strong> with Mondrian and Saiku for interactive analysis.",
+    "pipeline-bi-feature-4": "<strong>PostgreSQL-based warehouse</strong> to support reporting and structured queries.",
+    "pipeline-bi-impact": "📊 <strong>The result?</strong> A complete BI pipeline that turns raw data into a structured analytical model ready for reporting and multidimensional analysis. 🚀",
+    "pipeline-bi-documentation-title": "Documentation",
+    "pipeline-bi-documentation-description": "If you want to review the full project code, including ETL flows, dimensional modeling, and analytical setup, you can visit my repository on <a href=\"https://github.com/guinansacaw/analisisRepositoriosEcuador/blob/main/README.md\" class=\"simple-link\" target=\"_blank\">GitHub</a>. The dataset is not directly included in the repository.",
+    "pipeline-bi-github": "The implementation details are in the code. Review them on GitHub.",
+    "pipeline-bi-medium": "If you want the project context, this is the write-up.",
+    "pipeline-bi-findings-title": "Key Findings",
+    "pipeline-bi-photo-credit": "The last slide is a photo by <a href=\"https://unsplash.com/es/@dwiadro?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Daniel Wiadro</a> on <a href=\"https://unsplash.com/es/fotos/hombre-soldando-un-metal-negro-GAEvM4qvlBk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Unsplash</a>"
 }

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/projects.css">
+    <title data-translate="loopyapp-title-page">LoopyApp - ERP, WhatsApp and Backend Automation</title>
+    <meta name="description" content="Technical overview of LoopyApp: ERP integration, WhatsApp automation, webhooks, Azure Functions, Azure SQL, idempotent processing, and multi-tenant architecture.">
+    <meta name="keywords" content="LoopyApp, WhatsApp automation, ERP integration, webhooks, Azure Functions, Azure SQL, backend automation, API integration">
+    <meta property="og:title" content="LoopyApp - ERP, WhatsApp and Backend Automation">
+    <meta property="og:description" content="Technical overview of LoopyApp: ERP integration, WhatsApp automation, webhooks, Azure Functions, Azure SQL, idempotent processing, and multi-tenant architecture.">
+    <meta property="og:image" content="/images/proyectos/analisis-canasta-compras/market-basket-analysis-portada.jpg">
+    <meta property="og:url" content="https://guinansacaw.github.io/projects/loopyapp.html">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7DXVKF525Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7DXVKF525Z');
+    </script>
+
+    <!-- Hotjar Tracking Code -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:5234778,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+    <style>
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 0.92rem;
+            line-height: 1.5;
+        }
+
+        code {
+            font-family: Consolas, Monaco, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <p class="logo">
+                <img src="/images/pajaro_rojo.png" alt=""> William Guiñansaca
+            </p>
+
+            <input type="checkbox" id="men-u"/>
+            <label for="men-u" class="men-u-icono">
+                <img src="/images/menu3.png" alt="">
+            </label>
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <i class="bi bi-globe2"></i>
+                        <select id="lang-selector" class="language">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                        </select>
+                    </li>
+                    <li><a href="/#home" data-translate="menu_home">Home</a></li>
+                    <li><a href="/#about" data-translate="menu_about">About</a></li>
+                    <li><a href="/#portfolio" data-translate="menu_portfolio">Portfolio</a></li>
+                    <li><a href="/#contact" data-translate="menu_contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="content">
+            <div class="container">
+
+                <div class="project-hero">
+                    <div class="project-hero-copy">
+                        <p class="project-kicker" data-translate="loopyapp-kicker">
+                            Backend automation case: from ERP events to automated customer feedback
+                        </p>
+
+                        <h1 data-translate="loopyapp-title-project">LoopyApp - ERP, WhatsApp and Backend Automation</h1>
+
+                        <p class="project-value" data-translate="loopyapp-value">
+                            This system turns ERP sales into automated WhatsApp surveys, captures responses, and stores structured data for analysis — without manual intervention.
+                        </p>
+                    </div>
+
+                    <div class="project-hero-proof">
+                        <div class="impact impact-strong">
+                            <p data-translate="loopyapp-impact-strong">
+                                <strong>Result:</strong> each sale triggers a measurable feedback loop, reducing manual work and enabling real-time visibility of customer experience.
+                            </p>
+                        </div>
+
+                        <div class="etiquetas-contenedor-herramientas">
+                            <span class="etiqueta-herramientas"><strong>Node.js</strong></span>
+                            <span class="etiqueta-herramientas"><strong>REST APIs</strong></span>
+                            <span class="etiqueta-herramientas"><strong>Webhooks</strong></span>
+                            <span class="etiqueta-herramientas"><strong>Azure Functions</strong></span>
+                            <span class="etiqueta-herramientas"><strong>Azure SQL</strong></span>
+                            <span class="etiqueta-herramientas"><strong>WhatsApp API</strong></span>
+                            <span class="etiqueta-herramientas"><strong>Power BI (semantic model)</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="figure figure-highlight">
+                    <div class="figure-header">
+                        <h2 data-translate="loopyapp-flow-title">How it works</h2>
+                        <p data-translate="loopyapp-summary-text">
+                            The system takes real business events such as sales or invoices, transforms them into a standard order format, validates business rules, schedules message delivery, and stores responses with full traceability.
+                        </p>
+                    </div>
+
+                    <div class="figure-frame">
+                        <img src="/images/proyectos/loopyapp/loopyapp_diagrama_desarrollador.svg" alt="LoopyApp placeholder cover" class="img">
+                    </div>
+                </div>
+
+
+                <div class="business-case">
+                    <h2 data-translate="loopyapp-case-title">Business case</h2>
+
+                    <div class="business-case-grid">
+                        <div class="business-case-card business-case-problem">
+                            <h3 data-translate="loopyapp-card-problem-title">Problem</h3>
+                            <p data-translate="loopyapp-card-problem-text">
+                                Customer experience was not being measured in real time, surveys were manual or nonexistent, and ERP sales data was disconnected from customer feedback.
+                            </p>
+                        </div>
+
+                        <div class="business-case-card business-case-solution">
+                            <h3 data-translate="loopyapp-card-solution-title">Solution</h3>
+                            <p data-translate="loopyapp-card-solution-text">
+                                LoopyApp standardizes ERP data, applies business rules, sends WhatsApp surveys automatically, and processes responses through webhooks.
+                            </p>
+                        </div>
+
+                        <div class="business-case-card business-case-result">
+                            <h3 data-translate="loopyapp-card-result-title">Outcome</h3>
+                            <p data-translate="loopyapp-card-result-text">
+                                Each sale can trigger an automated survey, feedback is stored in a structured way, and customer experience can be analyzed by client, branch, or product.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+
+            
+
+                
+
+
+
+                
+
+                
+                <!-- <div class="contenedor-botones-explorar-proyectos">
+                    <div class="boton-explorar-proyecto">
+                        <div>
+                            <h3 data-translate="loopyapp-card-problem-title">Problem</h3>
+                            <p data-translate="loopyapp-card-problem-text">
+                                Customer experience was not being measured in real time, surveys were manual or nonexistent, and ERP sales data was disconnected from customer feedback.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="boton-explorar-proyecto">
+                        <div>
+                            <h3 data-translate="loopyapp-card-solution-title">Solution</h3>
+                            <p data-translate="loopyapp-card-solution-text">
+                                LoopyApp standardizes ERP data, applies business rules, sends WhatsApp surveys automatically, and processes responses through webhooks.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="boton-explorar-proyecto">
+                        <div>
+                            <h3 data-translate="loopyapp-card-result-title">Outcome</h3>
+                            <p data-translate="loopyapp-card-result-text">
+                                Each sale can trigger an automated survey, feedback is stored in a structured way, and customer experience can be analyzed by client, branch, or product.
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="flow-wrapper">
+                    <div class="contenedor-botones-explorar-proyectos">
+
+                    <div class="flow-section">
+                        <h2 class="flow-title" data-translate="loopyapp-flow-section-title">System flow</h2>
+                        <p class="flow-subtitle" data-translate="loopyapp-flow-section-subtitle">
+                            How the system processes data from ERP events to structured feedback.
+                        </p>
+                    </div>
+
+                    <div class="boton-explorar-proyecto">
+                        <div>
+                            <h3 data-translate="loopyapp-flow-card-1-title">1. Capture</h3>
+                            <p data-translate="loopyapp-flow-card-1-text">
+                                Sales data is read from the ERP, originally through SQL views and later through API-based collectors using incremental control.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="boton-explorar-proyecto">
+                        <div>
+                            <h3 data-translate="loopyapp-flow-card-2-title">2. Standardize</h3>
+                            <p data-translate="loopyapp-flow-card-2-text">
+                                Documents are grouped by invoice and converted into a standard order payload with customer, products, totals, and metadata.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="boton-explorar-proyecto">
+                        <div>
+                            <h3 data-translate="loopyapp-flow-card-3-title">3. Process</h3>
+                            <p data-translate="loopyapp-flow-card-3-text">
+                                The core validates authentication, saves the order, checks campaign rules, validates the phone number, and controls cooldowns and minimum amount.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="boton-explorar-proyecto">
+                        <div>
+                            <h3 data-translate="loopyapp-flow-card-4-title">4. Dispatch</h3>
+                            <p data-translate="loopyapp-flow-card-4-text">
+                                If the order passes validation, it is queued and later dispatched as a WhatsApp survey message.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="boton-explorar-proyecto">
+                        <div>
+                            <h3 data-translate="loopyapp-flow-card-5-title">5. Webhook + Storage</h3>
+                            <p data-translate="loopyapp-flow-card-5-text">
+                                Customer responses, NPS scores, comments, and delivery states are captured through webhooks and stored in Azure SQL.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- NUEVO PASO -->
+                    <div class="boton-explorar-proyecto">
+                        <div>
+                            <h3 data-translate="loopyapp-flow-card-6-title">6. Analytics layer</h3>
+                            <p data-translate="loopyapp-flow-card-6-text">
+                                Reporting-oriented SQL views were created to expose clean analytical tables. Power BI connects to these views to build the semantic model using a snowflake schema, including bridge tables where needed.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+
+                <h2 data-translate="loopyapp-architecture-title">Architecture at a glance</h2>
+                <ul class="minimal-list">
+                    <li data-translate="loopyapp-architecture-1"><strong>ERP / External system:</strong> source of sales or transactional data.</li>
+                    <li data-translate="loopyapp-architecture-2"><strong>Collector:</strong> incremental integration layer that reads APIs and builds a standard sync payload.</li>
+                    <li data-translate="loopyapp-architecture-3"><strong>Core API:</strong> receives orders at /api/sync and applies processing logic.</li>
+                    <li data-translate="loopyapp-architecture-4"><strong>Dispatcher:</strong> sends pending WhatsApp messages.</li>
+                    <li data-translate="loopyapp-architecture-5"><strong>Webhook handler:</strong> receives delivery events and customer responses.</li>
+                    <li data-translate="loopyapp-architecture-6"><strong>Azure SQL:</strong> stores orders, messages, responses, and control tables.</li>
+                    <li data-translate="loopyapp-architecture-7">
+                        <strong>Analytics layer:</strong> SQL views expose structured data for reporting, enabling Power BI to connect and build the semantic model.
+                    </li>
+                </ul>
+
+                <h2 data-translate="loopyapp-decisions-title">Key engineering decisions</h2>
+                <div class="contenedor-botones-explorar-proyectos">
+                    <div class="boton-explorar-proyecto">
+                        <div>
+                            <h3 data-translate="loopyapp-decision-card-1-title">Multi-tenant</h3>
+                            <p data-translate="loopyapp-decision-card-1-text">
+                                Processing is isolated by company and branch, preventing data mixing across clients.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="boton-explorar-proyecto">
+                        <div>
+                            <h3 data-translate="loopyapp-decision-card-2-title">Watermark</h3>
+                            <p data-translate="loopyapp-decision-card-2-text">
+                                Only new records are processed, avoiding unnecessary reprocessing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="boton-explorar-proyecto">
+                        <div>
+                            <h3 data-translate="loopyapp-decision-card-3-title">Idempotency</h3>
+                            <p data-translate="loopyapp-decision-card-3-text">
+                                Each ERP document is checked before processing to prevent duplicates.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="boton-explorar-proyecto">
+                        <div>
+                            <h3 data-translate="loopyapp-decision-card-4-title">Leases</h3>
+                            <p data-translate="loopyapp-decision-card-4-text">
+                                Tenant-level locking prevents concurrent processes from working on the same tenant.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="boton-explorar-proyecto">
+                        <div>
+                            <h3 data-translate="loopyapp-decision-card-5-title">Controlled errors</h3>
+                            <p data-translate="loopyapp-decision-card-5-text">
+                                Retries, circuit breaker behavior, and document-level failures reduce integration risk.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="boton-explorar-proyecto">
+                        <div>
+                            <h3 data-translate="loopyapp-decision-card-6-title">Audit runs</h3>
+                            <p data-translate="loopyapp-decision-card-6-text">
+                                Executions are logged with status, counts, and timestamps for monitoring.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 data-translate="loopyapp-collector-title">Collector</h2>
+                <p data-translate="loopyapp-collector-text-short">
+                    The collector made the system more flexible by replacing direct ERP database dependency with API-based integration. It fetches new data incrementally, maps it into the standard sync format, and sends it to the core.
+                </p>
+
+                <h2 data-translate="loopyapp-before-after-title">Before / After</h2>
+                <div class="contenedor-botones-explorar-proyectos">
+                    <div class="boton-explorar-proyecto">
+                        <div>
+                            <h3 data-translate="loopyapp-before-title">Before</h3>
+                            <ul class="minimal-list">
+                                <li data-translate="loopyapp-before-1">Direct ERP database dependency.</li>
+                                <li data-translate="loopyapp-before-2">Manual or missing surveys.</li>
+                                <li data-translate="loopyapp-before-3">No real-time customer experience measurement.</li>
+                                <li data-translate="loopyapp-before-4">Harder to integrate with large clients.</li>
+                                <li data-translate="loopyapp-before-5">No structured analytical layer for reporting.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="boton-explorar-proyecto">
+                        <div>
+                            <h3 data-translate="loopyapp-after-title">After</h3>
+                            <ul class="minimal-list">
+                                <li data-translate="loopyapp-after-1">API-based integration through collector adapters.</li>
+                                <li data-translate="loopyapp-after-2">Automated survey dispatch through WhatsApp.</li>
+                                <li data-translate="loopyapp-after-3">Structured response capture with traceability.</li>
+                                <li data-translate="loopyapp-after-4">Multi-tenant execution with duplicate protection.</li>
+                                <li data-translate="loopyapp-after-5">Dedicated reporting layer using SQL views and a semantic model in Power BI.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 data-translate="loopyapp-code-title">Technical implementation</h2>
+<p data-translate="loopyapp-code-intro">
+    These snippets show the kind of backend logic behind the system: receiving ERP events, applying business rules, and processing WhatsApp responses.
+</p>
+
+<div class="contenedor-botones-explorar-proyectos">
+    <div class="boton-explorar-proyecto">
+        <div>
+            <h3 data-translate="loopyapp-code-card-1-title">Sync endpoint</h3>
+            <p data-translate="loopyapp-code-card-1-text">
+                Receives standardized ERP orders, prevents duplicates, stores the order, and queues the survey flow.
+            </p>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <td>
+<pre><code>app.post('/api/sync', async (req, res) => {
+  const payload = req.body;
+
+  const exists = await db.checkDocument(payload.erp_doc_uid);
+  if (exists) {
+    return res.status(200).send('Already processed');
+  }
+
+  await db.saveCustomer(payload.customer);
+  await db.saveOrder(payload.order);
+  await db.saveOrderItems(payload.items);
+
+  await queue.add({
+    orderId: payload.order.id,
+    campaignId: payload.campaign_id
+  });
+
+  res.status(200).send('OK');
+});</code></pre>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="boton-explorar-proyecto">
+        <div>
+            <h3 data-translate="loopyapp-code-card-2-title">Business rules</h3>
+            <p data-translate="loopyapp-code-card-2-text">
+                Validates whether an order is eligible before scheduling message delivery.
+            </p>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <td>
+<pre><code>if (!isValidWhatsAppPhone(order.phone)) return;
+
+if (!campaign.is_active) return;
+
+if (order.total < campaign.min_amount) return;
+
+const lastSent = await getLastSurvey(order.customer_id);
+
+if (lastSent && daysSince(lastSent.sent_at) < campaign.cooldown_days) {
+  return;
+}
+
+await pendingQueue.insert({
+  order_id: order.id,
+  send_at: calculateDelay(campaign.delay_minutes)
+});</code></pre>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="boton-explorar-proyecto">
+        <div>
+            <h3 data-translate="loopyapp-code-card-3-title">Webhook processing</h3>
+            <p data-translate="loopyapp-code-card-3-text">
+                Captures message status and customer survey responses from WhatsApp.
+            </p>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <td>
+<pre><code>app.post('/webhook', async (req, res) => {
+  const event = req.body;
+
+  if (event.type === 'message_status') {
+    await db.saveMessageStatus({
+      messageId: event.message_id,
+      status: event.status
+    });
+  }
+
+  if (event.type === 'survey_response') {
+    const parsed = parseSurveyResponse(event.message_text);
+
+    await db.saveSurveyResponse({
+      customerPhone: event.from,
+      score: parsed.score,
+      comment: parsed.comment
+    });
+  }
+
+  res.sendStatus(200);
+});</code></pre>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <!-- <h2 data-translate="loopyapp-limitations-title">Current limitations</h2>
+                <ul class="minimal-list">
+                    <li data-translate="loopyapp-limitations-1">Core security is still basic and relies on API key authentication.</li>
+                    <li data-translate="loopyapp-limitations-2">There is no administration UI for configuration management.</li>
+                    <li data-translate="loopyapp-limitations-3">The system depends on ERP data quality.</li>
+                    <li data-translate="loopyapp-limitations-4">Some mappings remain manual and ERP-specific.</li>
+                </ul> -->
+
+                <h2 data-translate="loopyapp-conclusion-title">Conclusion</h2>
+                <p data-translate="loopyapp-conclusion-short">
+                    LoopyApp is a backend automation and integration system that turns operational ERP events into measurable customer feedback workflows.
+                </p>
+
+
+                <!-- <h2 data-translate="cta-title">Need something similar?</h2>
+                <p data-translate="cta-text">
+                    I build backend integrations that connect systems, automate workflows, and handle real-time events using APIs and webhooks.
+                </p>
+
+                <div class="contenedor-botones-explorar-proyectos">
+                    <div class="boton-explorar-proyecto">
+                        <a href="/#contact">
+                            <h3 data-translate="loopyapp-cta-button">Contact me</h3>
+                            <p data-translate="cta-support">
+                                Tell me what you need to connect, automate, or simplify.
+                            </p>
+                        </a>
+                    </div>
+                </div> -->
+
+                <div class="cta-destacado">
+                    <h2 data-translate="loopyapp-cta-title">Need a system like this?</h2>
+
+                    <p data-translate="loopyapp-cta-text">
+                        I build backend systems that connect ERPs, APIs, webhooks, and messaging flows into automated, reliable processes.
+                    </p>
+
+                    <a href="/#contact" class="cta-destacado-boton" data-translate="loopyapp-cta-button">
+                        Contact me
+                    </a>
+
+                    <p class="cta-support" data-translate="loopyapp-cta-support">
+                        Tell me what you need to connect, automate, or simplify.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <hr class="borde">
+
+    <footer id="footer">
+        <div class="container footer-simple">
+
+            <div class="footer-brand">
+                <img src="/images/pajaro_rojo.png" alt="logo">
+                <span>William Guiñansaca</span>
+                <img src="/images/pajaro_rojo.png" alt="logo">
+            </div>
+
+            <p class="footer-positioning">
+                Backend automation · API integrations · Webhooks · WhatsApp automation
+            </p>
+
+            <div class="footer-links">
+                <!-- <a href="https://github.com/guinansacaw" target="_blank" rel="noopener noreferrer">GitHub</a> -->
+                <a href="https://www.linkedin.com/in/guinansacaw/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.upwork.com/freelancers/~01babf8c5a61df03d6?mp_source=share" target="_blank" rel="noopener noreferrer">Upwork</a>
+            </div>
+
+            <p class="footer-copy">
+                © All rights reserved
+            </p>
+
+        </div>
+    </footer>
+
+    <script src="/js/translations.js"></script>
+    <script src="/js/menu-header.js"></script>
+</body>
+</html>

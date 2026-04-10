@@ -1,0 +1,271 @@
+1. **Confirmación** — hago la auditoría de fase 1 y te dejo el mapa cerrado de impacto sobre traducciones, `data-translate`, JS y posicionamiento BI.
+
+2. **Solución**
+
+## Auditoría — mapa de impacto
+
+### A. Archivos afectados
+
+**Directamente afectados**
+
+* `script.js` — mezcla menú, email y traducciones; además duplica la lógica de `translations.js` 
+* `translations.js` — contiene la misma lógica de traducciones que ya está en `script.js` 
+* `index.html` — usa `data-translate` correctamente en lo principal, pero mantiene varios textos visibles hardcodeados
+* `loopyapp.html` — tiene claves `data-translate` que no existen en los JSON y también mantiene varios textos visibles hardcodeados
+* `pipeline-bi-libaustral.html` — tiene `data-translate` vacío, una clave inexistente, contenido hardcodeado y además choca con el posicionamiento del proyecto
+* `en.json` — faltan claves usadas en `loopyapp.html`; además tiene claves que no existen en `es.json`
+* `es.json` — comparte la ausencia de claves usadas en `loopyapp.html`; no tiene varias claves que sí existen en `en.json`
+
+**Afectado por contrato/criterio**
+
+* `project_spec.md` — define que hay que alinear o eliminar ruido BI y enfocar el portfolio en backend automation y LoopyApp 
+
+---
+
+### B. Claves faltantes
+
+#### Faltan en ambos JSON y sí se usan en HTML
+
+Estas claves están en `loopyapp.html` pero no existen ni en `en.json` ni en `es.json`:
+
+* `loopyapp-cta-title`
+* `loopyapp-cta-text`
+* `loopyapp-cta-support`
+
+**Problema real:**
+en los JSON existen `cta-title`, `cta-text` y `cta-support`, pero en HTML se usan otras claves con prefijo `loopyapp-`. Eso viola contrato semántico: no son las mismas claves y no se pueden asumir equivalentes.
+
+#### Falta en ambos JSON y también se usa en HTML
+
+* `ecuadorsalaries-title-page` en `pipeline-bi-libaustral.html` no existe ni en `en.json` ni en `es.json` 
+
+#### Existen en `en.json` pero no en `es.json`
+
+* `logo`
+* `bellabeat-step1`
+* `bellabeat-step2`
+* `bellabeat-step3`
+* `bellabeat-step4`
+* `bellabeat-step5`
+* `bellabeat-step6`
+
+Esto ya es inconsistencia de contrato entre idiomas aunque no sea el foco inmediato de las 4 críticas. Igual queda dentro del mapa. 
+
+---
+
+### C. `data-translate` vacíos o inconsistentes
+
+#### Vacíos
+
+* `pipeline-bi-libaustral.html`
+
+  * `<h1 data-translate="">Implementación de un Sistema Completo de BI con ETL y OLAP</h1>` 
+
+#### Inconsistentes
+
+* `pipeline-bi-libaustral.html`
+
+  * `<title data-translate="ecuadorsalaries-title-page">...` usa una clave inexistente y además con naming inconsistente respecto a `ecuadorSalaries-*` 
+* `loopyapp.html`
+
+  * usa `loopyapp-cta-title`, `loopyapp-cta-text`, `loopyapp-cta-support`, pero en JSON existen `cta-title`, `cta-text`, `cta-support`
+
+---
+
+### D. Textos hardcodeados visibles
+
+## `index.html`
+
+Hay texto visible que no pasa por traducciones:
+
+* logo “William Guiñansaca”
+* opciones del selector `English` / `Español`
+* `h1` principal “William Guiñansaca”
+* footer:
+
+  * “Backend automation · API integrations · Webhooks · WhatsApp automation”
+  * “LinkedIn”
+  * “Upwork”
+  * “© All rights reserved” 
+
+Además, los nombres de tecnologías quedan visibles por fallback, lo cual no es necesariamente un error si se decide mantenerlos fijos:
+
+* `Node.js`, `REST APIs`, `Webhooks`, `Azure Functions`, `SQL`, `WhatsApp API` 
+
+## `loopyapp.html`
+
+Hardcodeados visibles:
+
+* logo “William Guiñansaca”
+* selector `English` / `Español`
+* etiquetas técnicas:
+
+  * `Node.js`
+  * `REST APIs`
+  * `Webhooks`
+  * `Azure Functions`
+  * `Azure SQL`
+  * `WhatsApp API`
+  * `Power BI (semantic model)`
+* footer:
+
+  * “Backend automation · API integrations · Webhooks · WhatsApp automation”
+  * `LinkedIn`
+  * `Upwork`
+  * `© All rights reserved`
+
+## `pipeline-bi-libaustral.html`
+
+Hardcodeados visibles relevantes:
+
+* `h1` completo en español con `data-translate` vacío
+* “De: William Guiñansaca”
+* stack técnico completo
+* botones/títulos visibles `GitHub`, `Medium`
+* footer “More about:” y “© All rights reserved - William Guiñansaca” 
+
+**Problema real aquí:**
+esta página mezcla:
+
+* contenido en español
+* labels en inglés
+* traducciones parciales
+* fallback hardcodeado inconsistente
+
+---
+
+### E. Bloques JS que deben separarse
+
+## `script.js`
+
+Hoy contiene 3 responsabilidades distintas:
+
+**1. Menú**
+
+* cierre del menú móvil al hacer click en links 
+
+**2. Formulario / email**
+
+* submit del formulario
+* control del botón
+* `emailjs.sendForm(...)` 
+
+**3. Traducciones**
+
+* carga de JSON
+* aplicación al DOM
+* persistencia en `localStorage`
+* listener del selector de idioma 
+
+Eso rompe la convención de una responsabilidad por archivo.
+
+## `translations.js`
+
+Contiene exactamente la parte de traducciones que ya está repetida en `script.js`:
+
+* `loadTranslations`
+* `applyTranslations`
+* `selectedLanguage`
+* listener de cambio de idioma
+
+**Separación requerida**
+
+* `translations.js` → solo traducciones
+* `menu-header.js` → solo menú
+* `script.js` → solo formulario/email, o renombrarlo después si hace falta
+
+---
+
+### F. Partes de BI que chocan con el posicionamiento
+
+El `project_spec.md` dice tres cosas no negociables:
+
+* enfocar el portfolio en backend automation, API integrations y workflows
+* destacar especialmente LoopyApp
+* eliminar o alinear proyectos que generan ruido, especialmente BI/certificaciones 
+
+La página `pipeline-bi-libaustral.html` choca con eso en varios puntos:
+
+**1. Título**
+
+* “Pipeline Completo de Business Intelligence”
+* “Implementación de un Sistema Completo de BI con ETL y OLAP”
+
+**2. Metadatos**
+
+* `meta description`, `keywords`, `og:title`, `og:description` posicionan explícitamente BI/OLAP como propuesta central 
+
+**3. Contenido principal**
+
+* habla de dashboards, análisis salariales, outliers, distribución por género, etc. como foco del proyecto 
+
+**4. Claves reutilizadas con significado incorrecto**
+
+* usa claves `ecuadorSalaries-*` para una página que dice ser de BI/ETL/OLAP. Eso no es solo desorden: es reutilización semánticamente incorrecta.
+
+**5. Señal comercial equivocada**
+
+* muestra BI, dashboards y análisis como capacidad protagonista, justo lo que el spec manda reducir o alinear.
+
+---
+
+## Cierre de fase 1
+
+### Lista cerrada
+
+**Archivos afectados**
+
+* `script.js`
+* `translations.js`
+* `index.html`
+* `loopyapp.html`
+* `pipeline-bi-libaustral.html`
+* `en.json`
+* `es.json`
+
+**Claves faltantes**
+
+* `loopyapp-cta-title`
+* `loopyapp-cta-text`
+* `loopyapp-cta-support`
+* `ecuadorsalaries-title-page`
+
+**Claves inconsistentes entre idiomas**
+
+* `logo`
+* `bellabeat-step1`
+* `bellabeat-step2`
+* `bellabeat-step3`
+* `bellabeat-step4`
+* `bellabeat-step5`
+* `bellabeat-step6`
+
+**`data-translate` vacíos**
+
+* 1 caso:
+
+  * `pipeline-bi-libaustral.html` → `h1 data-translate=""`
+
+**Bloques JS que deben separarse**
+
+* menú
+* email/formulario
+* traducciones
+
+**Conflictos de posicionamiento BI**
+
+* título
+* metadatos SEO/OG
+* narrativa de dashboard/BI
+* reutilización incorrecta de claves `ecuadorSalaries-*`
+
+3. **Archivos modificados**
+
+* Ninguno.
+* Esta fase fue solo auditoría.
+
+4. **⚠️ Observaciones**
+
+* El problema más sucio no es la duplicación de traducciones. Es `pipeline-bi-libaustral.html`.
+* Esa página no solo está desalineada: también está construida con claves de otro proyecto y con naming inconsistente.
+* Después de esto, el siguiente paso correcto es Fase 2: consolidar traducciones.
