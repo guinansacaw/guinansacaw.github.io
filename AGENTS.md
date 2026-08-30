@@ -33,6 +33,15 @@ This repository is a static portfolio built with HTML, CSS, and vanilla JavaScri
 - After making changes, summarize exactly which files changed and why.
 - Report any validation that was performed and any remaining uncertainty.
 
+## Project documentation
+
+- `docs/PORTFOLIO_STRATEGY.md` is the source of truth for professional positioning, target market, target services, portfolio composition, and the purpose of each project.
+- Read `docs/PORTFOLIO_RESTRUCTURE_PLAN.md` before making portfolio-wide content, positioning, structural, or redesign changes.
+- Read `docs/PROJECT_CASE_STUDY_GUIDELINES.md` before creating or substantially modifying project cards, project pages, or case studies.
+- When a task affects strategic positioning, consult `docs/PORTFOLIO_STRATEGY.md` before implementation.
+- Do not reinterpret or override decisions explicitly established in these documents without approval.
+- Do not load all documentation for unrelated technical fixes; consult only the documents relevant to the task.
+
 ## Git and deployment
 
 - Do not commit automatically.
