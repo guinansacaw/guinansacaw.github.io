@@ -525,6 +525,19 @@ tr:hover {
 /*---------------------------------------------------------------------*/
 /* LOOPYAPP */
 
+.loopy-section {
+    margin: 72px 0;
+}
+
+.loopy-section-kicker {
+    margin: 0 0 12px 0;
+    color: #C90B4A;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
 .project-hero {
     display: grid;
     grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
@@ -536,6 +549,50 @@ tr:hover {
     border-radius: 18px;
     background-color: #ffffff;
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
+}
+
+.loopy-hero {
+    grid-template-columns: 1fr;
+    gap: 0;
+    align-items: center;
+    margin-bottom: 48px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.loopy-hero .project-hero-copy {
+    width: 100%;
+    padding: 24px 0;
+    text-align: left;
+}
+
+.loopy-hero .etiquetas-contenedor-herramientas {
+    margin-top: 10px;
+}
+
+.loopy-hero .etiqueta-herramientas {
+    background-color: #ffffff;
+}
+
+.loopy-hero-visual img,
+.loopy-visual-band img,
+.loopy-image-panel img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.loopy-hero-visual {
+    overflow: hidden;
+    min-height: 390px;
+    border: 1px solid #e6efea;
+    border-radius: 28px;
+    background-color: #ffffff;
+    box-shadow: 0 20px 55px rgba(16, 38, 30, 0.08);
 }
 
 .project-hero-copy {
@@ -566,12 +623,30 @@ tr:hover {
     color: #111111;
 }
 
+.loopy-hero h1 {
+    max-width: 1100px;
+    width: 100%;
+    font-size: clamp(2.8rem, 4.4vw, 4.45rem);
+    letter-spacing: 0;
+    line-height: 1.02;
+}
+
+.loopy-hero h1::after {
+    display: none;
+}
+
 .project-value {
     margin: 0;
     max-width: 760px;
     font-size: 1.05rem;
     line-height: 1.7;
     color: #2c2c2c;
+}
+
+.loopy-hero .project-value {
+    max-width: 900px;
+    width: 100%;
+    font-size: 1.08rem;
 }
 
 .impact-strong {
@@ -600,6 +675,44 @@ tr:hover {
     border-radius: 18px;
     background-color: #ffffff;
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
+}
+
+.loopy-architecture {
+    margin: 78px 0 68px 0;
+    padding: 34px;
+    border-color: #e7e2de;
+    border-radius: 28px;
+    background-color: #fcfcfc;
+    box-shadow: none;
+}
+
+.loopy-architecture .figure-header {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.loopy-architecture .figure-header h2 {
+    max-width: 720px;
+    font-size: clamp(2.1rem, 4vw, 3.55rem);
+}
+
+.loopy-architecture .figure-header p {
+    max-width: 820px;
+}
+
+.loopy-architecture-frame {
+    display: block;
+    padding: 0;
+    border-radius: 22px;
+    background-color: #ffffff;
+    box-shadow: 0 18px 45px rgba(14, 44, 32, 0.08);
+}
+
+.loopy-architecture-frame .img {
+    max-width: none;
+    margin: 0;
+    border-radius: 22px;
+    object-fit: contain;
 }
 
 .figure-header {
@@ -655,6 +768,16 @@ tr:hover {
     color: #111111;
 }
 
+.loopy-business {
+    margin-bottom: 68px;
+}
+
+.loopy-business h2 {
+    max-width: 860px;
+    margin-bottom: 34px;
+    font-size: clamp(2rem, 4vw, 3.6rem);
+}
+
 .business-case-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -667,6 +790,18 @@ tr:hover {
     border-radius: 16px;
     background-color: #ffffff;
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
+}
+
+.loopy-business .business-case-card {
+    padding: 0 26px 0 0;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.loopy-business .business-case-card h3 {
+    color: #111111;
 }
 
 .business-case-card h3 {
@@ -702,6 +837,45 @@ tr:hover {
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
 }
 
+.flow-wrapper {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.flow-wrapper .contenedor-botones-explorar-proyectos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.flow-wrapper .boton-explorar-proyecto {
+    min-height: 230px;
+    padding: 24px;
+    border-radius: 18px;
+    box-shadow: none;
+}
+
+.loopy-card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 18px;
+    border-radius: 14px;
+    background-color: rgba(201, 11, 74, 0.08);
+    color: #C90B4A;
+    font-size: 1.35rem;
+}
+
+.flow-wrapper .boton-explorar-proyecto p,
+.loopy-compact-grid .boton-explorar-proyecto p {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
 .flow-wrapper .contenedor-botones-explorar-proyectos {
     gap: 20px;
 }
@@ -718,11 +892,231 @@ tr:hover {
     color: #111111;
 }
 
+.flow-title,
+.loopy-decisions h2,
+.loopy-role h2,
+.loopy-dark-header h2,
+.loopy-text-panel h2,
+.loopy-visual-copy h2,
+.loopy-operations h2 {
+    font-size: clamp(2rem, 3.4vw, 3.25rem);
+    line-height: 1.05;
+}
+
 .flow-subtitle {
     margin: 0;
     font-size: 1rem;
     line-height: 1.7;
     color: #555555;
+}
+
+.loopy-visual-band {
+    margin: 76px 0;
+}
+
+.loopy-visual-copy {
+    margin-bottom: 22px;
+}
+
+.loopy-visual-copy h2 {
+    margin: 0;
+    max-width: 760px;
+}
+
+.loopy-visual-band img {
+    height: auto;
+    aspect-ratio: 16 / 7.8;
+    border: 1px solid #e7e2de;
+    border-radius: 28px;
+    box-shadow: 0 18px 52px rgba(16, 38, 30, 0.08);
+}
+
+.loopy-image-text {
+    display: grid;
+    gap: 38px;
+    align-items: center;
+    margin: 80px 0;
+}
+
+.loopy-cx {
+    grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+}
+
+.loopy-analytics {
+    grid-template-columns: minmax(320px, 0.75fr) minmax(0, 1.25fr);
+}
+
+.loopy-image-panel {
+    overflow: hidden;
+    border: 1px solid #e7e2de;
+    border-radius: 28px;
+    box-shadow: 0 18px 52px rgba(16, 38, 30, 0.08);
+}
+
+.loopy-image-panel img {
+    height: auto;
+    aspect-ratio: 16 / 8.8;
+}
+
+.loopy-text-panel p {
+    margin: 0;
+    color: #4a4a4a;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.loopy-text-panel h2 {
+    margin: 0 0 18px 0;
+}
+
+.loopy-dark-section {
+    margin: 82px 0;
+    padding: 38px;
+    border-radius: 30px;
+    background-color: #111111;
+    color: #ffffff;
+}
+
+.loopy-dark-header {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.7fr);
+    gap: 32px;
+    align-items: end;
+    margin-bottom: 34px;
+}
+
+.loopy-dark-header h2,
+.loopy-dark-header p {
+    margin: 0;
+}
+
+.loopy-dark-header p {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.loopy-dark-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.loopy-dark-grid div {
+    padding: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.loopy-dark-grid span {
+    display: block;
+    margin-bottom: 28px;
+    color: #C90B4A;
+    font-weight: 800;
+}
+
+.loopy-dark-grid h3 {
+    margin: 0 0 10px 0;
+    color: #ffffff;
+}
+
+.loopy-dark-grid p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.65;
+}
+
+.loopy-operations {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.7fr);
+    gap: 42px;
+    align-items: center;
+    margin: 80px 0;
+}
+
+.loopy-operations p {
+    margin: 0;
+    color: #4a4a4a;
+    line-height: 1.8;
+}
+
+.loopy-process {
+    display: grid;
+    gap: 18px;
+}
+
+.loopy-process span {
+    position: relative;
+    display: block;
+    padding: 18px 20px;
+    border: 1px solid #e7e2de;
+    border-radius: 18px;
+    background-color: #ffffff;
+    color: #111111;
+    font-weight: 700;
+    box-shadow: 0 10px 28px rgba(16, 38, 30, 0.05);
+}
+
+.loopy-process span:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 28px;
+    bottom: -19px;
+    width: 2px;
+    height: 18px;
+    background-color: #C90B4A;
+}
+
+.loopy-decisions {
+    margin: 80px 0;
+}
+
+.loopy-compact-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.loopy-compact-grid .boton-explorar-proyecto {
+    padding: 22px;
+    box-shadow: none;
+}
+
+.loopy-role {
+    margin: 82px 0 68px 0;
+    padding: 38px;
+    border-radius: 30px;
+    background-color: #f7f4f2;
+}
+
+.loopy-role h2 {
+    margin: 0 0 18px 0;
+    max-width: 760px;
+}
+
+.loopy-role p {
+    margin: 0 0 22px 0;
+    max-width: 880px;
+    color: #4a4a4a;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.loopy-role .etiqueta-herramientas {
+    background-color: #ffffff;
+}
+
+.loopy-hero + .business-case,
+.loopy-decisions + .loopy-role {
+    margin-top: 0;
+}
+
+.loopy-cta {
+    padding: 44px;
+    border-radius: 30px;
+}
+
+.loopy-cta h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
 }
 
 /*---------------------------------------------------------------------*/
@@ -810,6 +1204,53 @@ tr:hover {
     .img {
         max-width: 900px;
         margin: 40px auto;
+    }
+}
+
+@media (max-width: 1100px) {
+    .loopy-hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .loopy-hero .project-hero-copy {
+        padding: 0;
+    }
+
+    .loopy-hero h1 {
+        max-width: 900px;
+        font-size: clamp(2.75rem, 7vw, 4.4rem);
+    }
+
+    .loopy-hero .project-value {
+        max-width: 760px;
+    }
+
+    .loopy-hero-visual {
+        min-height: 0;
+    }
+
+    .loopy-hero-visual img {
+        aspect-ratio: 16 / 8.8;
+    }
+
+    .loopy-cx,
+    .loopy-analytics,
+    .loopy-dark-header,
+    .loopy-operations {
+        grid-template-columns: 1fr;
+    }
+
+    .loopy-cx .loopy-image-panel {
+        order: 1;
+    }
+
+    .loopy-cx .loopy-text-panel {
+        order: 2;
+    }
+
+    .loopy-dark-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -930,8 +1371,23 @@ tr:hover {
         padding: 24px;
     }
 
+    .loopy-hero {
+        grid-template-columns: 1fr;
+        padding: 0;
+        margin-bottom: 52px;
+    }
+
+    .loopy-hero .project-hero-copy {
+        padding: 0;
+    }
+
     .project-hero h1 {
         font-size: 1.9rem;
+    }
+
+    .loopy-hero h1 {
+        font-size: 2.55rem;
+        line-height: 1.02;
     }
 
     .project-value {
@@ -942,8 +1398,31 @@ tr:hover {
         padding: 24px;
     }
 
+    .loopy-hero-visual {
+        min-height: 0;
+        border-radius: 22px;
+    }
+
+    .loopy-hero-visual img {
+        aspect-ratio: 16 / 10;
+    }
+
     .figure-highlight {
         padding: 24px;
+    }
+
+    .loopy-architecture {
+        padding: 22px;
+        border-radius: 22px;
+        margin: 58px 0;
+    }
+
+    .loopy-architecture-frame {
+        overflow-x: auto;
+    }
+
+    .loopy-architecture-frame .img {
+        min-width: 760px;
     }
 
     .figure-header h2,
@@ -951,6 +1430,22 @@ tr:hover {
     .cta-destacado h2,
     .flow-title {
         font-size: 1.5rem;
+    }
+
+    .loopy-architecture .figure-header h2,
+    .flow-title,
+    .loopy-decisions h2,
+    .loopy-role h2,
+    .loopy-dark-header h2,
+    .loopy-text-panel h2,
+    .loopy-visual-copy h2,
+    .loopy-operations h2 {
+        font-size: 2rem;
+        line-height: 1.08;
+    }
+
+    .loopy-cta h2 {
+        font-size: 2rem;
     }
 
     .figure-header p,
@@ -967,13 +1462,67 @@ tr:hover {
         gap: 16px;
     }
 
+    .loopy-business h2 {
+        font-size: 2rem;
+    }
+
     .business-case-card {
         padding: 24px;
+    }
+
+    .loopy-business .business-case-card {
+        padding: 0;
     }
 
     .flow-wrapper {
         padding: 24px;
         margin: 42px 0;
+    }
+
+    .flow-wrapper {
+        padding: 0;
+    }
+
+    .flow-wrapper .contenedor-botones-explorar-proyectos,
+    .loopy-compact-grid,
+    .loopy-dark-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .flow-wrapper .boton-explorar-proyecto {
+        min-height: 0;
+    }
+
+    .loopy-visual-band,
+    .loopy-image-text,
+    .loopy-dark-section,
+    .loopy-operations,
+    .loopy-decisions,
+    .loopy-role {
+        margin: 58px 0;
+    }
+
+    .loopy-visual-band img,
+    .loopy-image-panel img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .loopy-image-text,
+    .loopy-dark-header,
+    .loopy-operations {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .loopy-dark-section,
+    .loopy-role,
+    .loopy-cta {
+        padding: 24px;
+        border-radius: 22px;
+    }
+
+    .loopy-dark-grid div {
+        padding: 20px;
     }
 
     .cta-destacado {
